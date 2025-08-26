@@ -3,6 +3,7 @@ package com.supremetor.endgamegear.item;
 import com.supremetor.endgamegear.EndgameGear;
 import com.supremetor.endgamegear.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -13,6 +14,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.minecraft.util.Unit;
 
 import java.util.List;
 import java.util.function.Function;
@@ -54,7 +56,8 @@ public class ModItems {
     public static final Item DRAGONITE_HELMET = registerItem("dragonite_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item DRAGONITE_CHESTPLATE = registerItem("dragonite_chestplate",
-            setting -> new Item(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+            setting -> new Item(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)
+                    .component(DataComponentTypes.GLIDER, Unit.INSTANCE)));
     public static final Item DRAGONITE_LEGGINGS = registerItem("dragonite_leggings",
             setting -> new Item(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
     public static final Item DRAGONITE_BOOTS = registerItem("dragonite_boots",
