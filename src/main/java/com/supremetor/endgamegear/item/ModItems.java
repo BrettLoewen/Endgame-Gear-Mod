@@ -51,6 +51,15 @@ public class ModItems {
                     getPrismarineUpgradeEmptyAdditionsSlotTextures(),
                     setting.rarity(Rarity.UNCOMMON)));
 
+    public static final Item DRAGONITE_HELMET = registerItem("dragonite_helmet",
+            setting -> new ModArmorItem(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.HELMET)));
+    public static final Item DRAGONITE_CHESTPLATE = registerItem("dragonite_chestplate",
+            setting -> new Item(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.CHESTPLATE)));
+    public static final Item DRAGONITE_LEGGINGS = registerItem("dragonite_leggings",
+            setting -> new Item(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
+    public static final Item DRAGONITE_BOOTS = registerItem("dragonite_boots",
+            setting -> new Item(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
     // From SmithingTemplateItem.java
     private static List<Identifier> getPrismarineUpgradeEmptyBaseSlotTextures() {
         return List.of(

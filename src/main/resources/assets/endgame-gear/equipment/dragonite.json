@@ -1,0 +1,24 @@
+{
+  "layers": {
+    "wolf_body": [
+      {
+        "texture": "endgame-gear:dragonite"
+      }
+    ],
+    "horse_body": [
+      {
+        "texture": "endgame-gear:dragonite"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "endgame-gear:dragonite"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "endgame-gear:dragonite"
+      }
+    ]
+  }
+}

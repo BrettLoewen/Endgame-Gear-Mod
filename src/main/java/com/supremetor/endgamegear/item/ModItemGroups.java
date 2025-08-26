@@ -53,6 +53,17 @@ public class ModItemGroups {
                         entries.add(Items.TRIDENT);
                     }).build());
 
+    public static final ItemGroup DRAGONITE_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(EndgameGear.MOD_ID, "dragonite_items"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(Blocks.END_STONE))
+                    .displayName(Text.translatable("itemgroup.endgame-gear.dragonite_items"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.DRAGONITE_HELMET);
+                        entries.add(ModItems.DRAGONITE_CHESTPLATE);
+                        entries.add(ModItems.DRAGONITE_LEGGINGS);
+                        entries.add(ModItems.DRAGONITE_BOOTS);
+                    }).build());
+
     public static void registerItemGroups() {
     }
 }

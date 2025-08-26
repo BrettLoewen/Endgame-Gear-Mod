@@ -16,6 +16,7 @@ import java.util.EnumMap;
 public class ModArmorMaterials {
     static RegistryKey<? extends Registry<EquipmentAsset>> REGISTRY_KEY = RegistryKey.ofRegistry(Identifier.ofVanilla("equipment_asset"));
     public static final RegistryKey<EquipmentAsset> PRISMARINE_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(EndgameGear.MOD_ID, "prismarine"));
+    public static final RegistryKey<EquipmentAsset> DRAGONITE_KEY = RegistryKey.of(REGISTRY_KEY, Identifier.of(EndgameGear.MOD_ID, "dragonite"));
 
     public static final ArmorMaterial PRISMARINE_ARMOR_MATERIAL =
             new ArmorMaterial(37, Util.make(new EnumMap<>(EquipmentType.class), map -> {
@@ -25,4 +26,13 @@ public class ModArmorMaterials {
         map.put(EquipmentType.HELMET, 3);
         map.put(EquipmentType.BODY, 11);
     }), 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,3.0f,0.1f, ModTags.Items.PRISMARINE_REPAIR, PRISMARINE_KEY);
+
+    public static final ArmorMaterial DRAGONITE_ARMOR_MATERIAL =
+            new ArmorMaterial(37, Util.make(new EnumMap<>(EquipmentType.class), map -> {
+                map.put(EquipmentType.BOOTS, 3);
+                map.put(EquipmentType.LEGGINGS, 6);
+                map.put(EquipmentType.CHESTPLATE, 8);
+                map.put(EquipmentType.HELMET, 3);
+                map.put(EquipmentType.BODY, 11);
+            }), 15, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND,3.0f,0.1f, ModTags.Items.DRAGONITE_REPAIR, DRAGONITE_KEY);
 }

@@ -38,5 +38,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.PRISMARINE_BOOTS, ModArmorMaterials.PRISMARINE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
         itemModelGenerator.register(ModItems.PRISMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+
+        itemModelGenerator.registerArmor(ModItems.DRAGONITE_HELMET, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.DRAGONITE_CHESTPLATE, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.DRAGONITE_LEGGINGS, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
+        itemModelGenerator.registerArmor(ModItems.DRAGONITE_BOOTS, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
     }
 }

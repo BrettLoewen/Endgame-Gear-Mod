@@ -34,7 +34,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PRISMARINE_HELMET)
                 .add(ModItems.PRISMARINE_CHESTPLATE)
                 .add(ModItems.PRISMARINE_LEGGINGS)
-                .add(ModItems.PRISMARINE_BOOTS);
+                .add(ModItems.PRISMARINE_BOOTS)
+                .add(ModItems.DRAGONITE_HELMET)
+                .add(ModItems.DRAGONITE_CHESTPLATE)
+                .add(ModItems.DRAGONITE_LEGGINGS)
+                .add(ModItems.DRAGONITE_BOOTS);
 
         valueLookupBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
                 .add(ModItems.PRISMARINE_INGOT);
