@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_hoe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_hoe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_prismarine_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgame-gear:prismarine_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_prismarine_upgrade_smithing_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgame-gear:prismarine_upgrade_smithing_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "endgame-gear:prismarine_upgrade_hoe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_prismarine_upgrade_smithing_template",
+      "has_prismarine_ingot",
+      "has_diamond_hoe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "endgame-gear:prismarine_upgrade_hoe"
+    ]
+  }
+}

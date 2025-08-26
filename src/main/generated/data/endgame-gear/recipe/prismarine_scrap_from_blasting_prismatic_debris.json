@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2.0,
+  "group": "prismarine_scrap",
+  "ingredient": "endgame-gear:prismatic_debris",
+  "result": {
+    "id": "endgame-gear:prismarine_scrap"
+  }
+}

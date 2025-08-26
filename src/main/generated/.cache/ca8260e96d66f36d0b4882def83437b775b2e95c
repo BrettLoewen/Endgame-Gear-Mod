@@ -1,0 +1,5 @@
+// 1.21.8	-999999999-01-01T00:00:00	Endgame Gear/Tags for minecraft:block
+f553b1c169a86698dcea802f9474234d6b49f130 data/endgame-gear/tags/block/prismarine_pillar_surfaces.json
+f9196a431065d32b5801dfe97f270fb289ee6b41 data/minecraft/tags/block/beacon_base_blocks.json
+9b6073d30394381527aee4df23c9570c4a4b4878 data/minecraft/tags/block/mineable/pickaxe.json
+b260e973c98280ff6ea00a182b48c88a8d3914e0 data/minecraft/tags/block/needs_diamond_tool.json

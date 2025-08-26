@@ -1,0 +1,4 @@
+// 1.21.8	-999999999-01-01T00:00:00	Endgame Gear/Block Loot Tables
+f644a91842e1ea4ab6dff1dc34e1e2c0e817022b data/endgame-gear/loot_table/blocks/prismarine_block.json
+8dd06f1531a21f59cf4353cb63d024d1cb6a8642 data/endgame-gear/loot_table/blocks/prismarine_crystal.json
+a57eea8427679f968d71571d6b05f467b3e6d1b0 data/endgame-gear/loot_table/blocks/prismatic_debris.json

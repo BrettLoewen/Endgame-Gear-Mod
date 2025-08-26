@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "endgame-gear:prismarine_ingot",
+  "base": "minecraft:diamond_chestplate",
+  "result": {
+    "id": "endgame-gear:prismarine_chestplate"
+  },
+  "template": "endgame-gear:prismarine_upgrade_smithing_template"
+}

@@ -1,0 +1,9 @@
+// 1.21.8	-999999999-01-01T00:00:00	Endgame Gear/Tags for minecraft:item
+48040bbdd7db55495d6ef7f8f643f2949bbe06ce data/endgame-gear/tags/item/prismarine_repair.json
+6061636eb4e8ce8bfe57cb6f86442763dee06973 data/minecraft/tags/item/axes.json
+48040bbdd7db55495d6ef7f8f643f2949bbe06ce data/minecraft/tags/item/beacon_payment_items.json
+d988375f73b1083fe8e9fc4d131f813fed3c9afd data/minecraft/tags/item/hoes.json
+e395167e6decc2c800589c68e79b82f9c3d0994b data/minecraft/tags/item/pickaxes.json
+85b6bda3e98e262e486a30777902d741fd3f9940 data/minecraft/tags/item/shovels.json
+ad620a84a5f5b22b9132734dc5c622b98f22a50e data/minecraft/tags/item/swords.json
+65a85308732f3d2eef5d84b5b16896a998417aa4 data/minecraft/tags/item/trimmable_armor.json

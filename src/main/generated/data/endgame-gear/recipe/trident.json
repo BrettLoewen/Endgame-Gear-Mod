@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "I": "endgame-gear:prismarine_ingot",
+    "S": "minecraft:prismarine_shard"
+  },
+  "pattern": [
+    " SS",
+    " IS",
+    "I  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:trident"
+  }
+}

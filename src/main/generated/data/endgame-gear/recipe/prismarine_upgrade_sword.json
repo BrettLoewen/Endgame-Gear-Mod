@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "endgame-gear:prismarine_ingot",
+  "base": "minecraft:diamond_sword",
+  "result": {
+    "id": "endgame-gear:prismarine_sword"
+  },
+  "template": "endgame-gear:prismarine_upgrade_smithing_template"
+}

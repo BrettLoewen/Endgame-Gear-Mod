@@ -1,0 +1,24 @@
+{
+  "layers": {
+    "wolf_body": [
+      {
+        "texture": "endgame-gear:prismarine"
+      }
+    ],
+    "horse_body": [
+      {
+        "texture": "endgame-gear:prismarine"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "endgame-gear:prismarine"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "endgame-gear:prismarine"
+      }
+    ]
+  }
+}

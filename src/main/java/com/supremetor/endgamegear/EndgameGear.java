@@ -1,7 +1,18 @@
 package com.supremetor.endgamegear;
 
+import com.supremetor.endgamegear.block.ModBlocks;
+import com.supremetor.endgamegear.item.ModItemGroups;
+import com.supremetor.endgamegear.item.ModItems;
+import com.supremetor.endgamegear.util.ModLootTableModifiers;
+import com.supremetor.endgamegear.world.custom.BlockPillarGrowthConfig;
+import com.supremetor.endgamegear.world.custom.BlockPillarGrowthFeature;
+import com.supremetor.endgamegear.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.feature.Feature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -9,7 +20,17 @@ public class EndgameGear implements ModInitializer {
 	public static final String MOD_ID = "endgame-gear";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	@Override
-	public void onInitialize() {
-	}
+    public static final Feature<BlockPillarGrowthConfig> BLOCK_PILLAR_GROWTH =
+            Registry.register(Registries.FEATURE,
+                    Identifier.of(EndgameGear.MOD_ID, "block_pillar_growth"),
+                    new BlockPillarGrowthFeature(BlockPillarGrowthConfig.CODEC));
+
+    @Override
+    public void onInitialize() {
+        ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
+        ModItemGroups.registerItemGroups();
+        ModLootTableModifiers.modifyLootTables();
+        ModWorldGeneration.generateModWorldGen();
+    }
 }

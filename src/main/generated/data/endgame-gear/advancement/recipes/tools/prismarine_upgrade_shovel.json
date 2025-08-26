@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_shovel": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:diamond_shovel"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_prismarine_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgame-gear:prismarine_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_prismarine_upgrade_smithing_template": {
+      "conditions": {
+        "items": [
+          {
+            "items": "endgame-gear:prismarine_upgrade_smithing_template"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "endgame-gear:prismarine_upgrade_shovel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_prismarine_upgrade_smithing_template",
+      "has_prismarine_ingot",
+      "has_diamond_shovel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "endgame-gear:prismarine_upgrade_shovel"
+    ]
+  }
+}
