@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "endgame-gear",
+	"version": "${version}",
+	"name": "Endgame Gear",
+	"description": "This mod adds new endgame tier gear to the game.",
+	"authors": [
+		"Brett Loewen (Supremetor)"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/endgame-gear/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.supremetor.endgamegear.EndgameGear"
+		],
+		"fabric-datagen": [
+			"com.supremetor.endgamegear.EndgameGearDataGenerator"
+		],
+        "client": [
+          "com.supremetor.endgamegear.EndgameGearClient"
+        ]
+	},
+	"mixins": [
+		"endgame-gear.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
