@@ -18,8 +18,10 @@ public class EndgameGearClient implements ClientModInitializer {
 //        );
         ArmorRenderer.register(
                 new ArmoredElytraRenderer(
-                        Identifier.of("minecraft", "textures/entity/equipment/humanoid/diamond.png"),
-//                        Identifier.of("endgame-gear", "textures/entity/equipment/humanoid/dragonite.png"),
+//                        "endgame-gear", "dragonite",
+//                        "minecraft", "diamond",
+//                        Identifier.of("minecraft", "textures/entity/equipment/humanoid/diamond.png"),
+                        Identifier.of("endgame-gear", "textures/entity/equipment/humanoid/dragonite.png"),
                         Identifier.of("minecraft", "textures/entity/equipment/wings/elytra.png")
                 ),
                 ModItems.DRAGONITE_CHESTPLATE

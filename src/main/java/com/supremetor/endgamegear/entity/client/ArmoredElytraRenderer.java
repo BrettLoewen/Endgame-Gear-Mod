@@ -24,48 +24,26 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 
 public class ArmoredElytraRenderer implements ArmorRenderer {
-//    private final ElytraEntityModel elytraModel;
-//
-//    public ArmoredElytraRenderer(EntityRendererFactory.Context context) {
-//        this.elytraModel = new ElytraEntityModel(context.getPart(EntityModelLayers.ELYTRA));
-//    }
-//
-//    @Override
-//    public void render(MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, ItemStack itemStack,
-//                       BipedEntityRenderState bipedEntityRenderState, EquipmentSlot equipmentSlot, int light,
-//                       BipedEntityModel<BipedEntityRenderState> bipedEntityModel) {
-//        if (equipmentSlot == EquipmentSlot.CHEST) {
-//            ArmorRenderer.renderPart(matrixStack, vertexConsumerProvider, light, itemStack, bipedEntityModel, bipedEntityRenderState);
-//
-//            MinecraftClient client = MinecraftClient.getInstance();
-//            Identifier elytraTexture = Identifier.of("textures.entity.elytra.png");
-//
-//            matrixStack.push();
-//            matrixStack.translate(0.0D, 0.0D, 0.125D);
-//
-//            this.elytraModel.setAngles(bipedEntityRenderState);
-//            VertexConsumer consumer = vertexConsumerProvider.getBuffer(RenderLayer.getArmorCutoutNoCull(elytraTexture));
-//            this.elytraModel.render(matrixStack, consumer, light, OverlayTexture.DEFAULT_UV);
-//
-//            matrixStack.pop();
-//        }
-//    }
-
-    private final ArmorEntityModel<BipedEntityRenderState> chestModel;
+    private final ArmorEntityModel<BipedEntityRenderState> armorModel;
     private final ElytraEntityModel elytraModelAdult;
     private final ElytraEntityModel elytraModelBaby;
 
-    private final Identifier chestTexture; // your armor chest texture
+//    private final String armorMaterialNamespace;
+//    private final String armorMaterial;
+    private final Identifier armorTexture;
     private final Identifier wingTexture;  // your wing/elytra texture
 
-    public ArmoredElytraRenderer(Identifier chestTexture, Identifier wingTexture) {
-        this.chestTexture = chestTexture;
+//    public ArmoredElytraRenderer(String armorMaterialNamespace, String armorMaterial, Identifier wingTexture) {
+    public ArmoredElytraRenderer(Identifier armorTexture, Identifier wingTexture) {
+//        this.armorMaterialNamespace = armorMaterialNamespace;
+//        this.armorMaterial = armorMaterial;
+        this.armorTexture = armorTexture;
         this.wingTexture  = wingTexture;
 
         // Build an outer armor model (1.0F dilation = outer)
         ModelData armorData = ArmorEntityModel.getModelData(new Dilation(1.0F)); // 1.21 API
-        TexturedModelData armorTmd = TexturedModelData.of(armorData, 64, 64);
-        this.chestModel = new ArmorEntityModel<>(armorTmd.createModel());
+        TexturedModelData armorTmd = TexturedModelData.of(armorData, 64, 32);
+        this.armorModel = new ArmorEntityModel<>(armorTmd.createModel());
 
         // Build elytra models (adult + baby)
         TexturedModelData elytraTmd      = ElytraEntityModel.getTexturedModelData();
@@ -75,6 +53,16 @@ public class ArmoredElytraRenderer implements ArmorRenderer {
         this.elytraModelAdult = new ElytraEntityModel(elytraTmd.createModel());
         this.elytraModelBaby  = new ElytraEntityModel(elytraTmdBaby.createModel());
     }
+
+    /**
+     * Builds the correct armor texture path (layer_1 or layer_2).
+     */
+//    private Identifier getArmorTexture(EquipmentSlot slot) {
+////        String layer = (slot == EquipmentSlot.LEGS) ? "2" : "1";
+////        return Identifier.of(armorMaterialNamespace,
+////                "textures/entity/equipment/humanoid/" + armorMaterial + "_layer_" + layer + ".png");
+//        return Identifier.of(armorMaterialNamespace,"textures/entity/equipment/humanoid/" + armorMaterial + ".png");
+//    }
 
     @Override
     public void render(MatrixStack matrices,
@@ -89,14 +77,16 @@ public class ArmoredElytraRenderer implements ArmorRenderer {
 
         // ---- 1) draw the chestplate armor ----
         // keep the armor model in sync with the player pose
-        contextModel.copyTransforms(this.chestModel); // 1.21 API
-        this.chestModel.setVisible(false);
-        this.chestModel.body.visible      = true;
-        this.chestModel.rightArm.visible  = true;
-        this.chestModel.leftArm.visible   = true;
-        this.chestModel.setAngles(state); // pose via render state
+        contextModel.copyTransforms(this.armorModel); // 1.21 API
+        this.armorModel.setVisible(false);
+        this.armorModel.body.visible      = true;
+        this.armorModel.rightArm.visible  = true;
+        this.armorModel.leftArm.visible   = true;
+        this.armorModel.setAngles(state); // pose via render state
 
-        ArmorRenderer.renderPart(matrices, consumers, light, stack, this.chestModel, this.chestTexture);
+//        Identifier armorTex = getArmorTexture(slot);
+//        ArmorRenderer.renderPart(matrices, consumers, light, stack, this.armorModel, armorTex);
+        ArmorRenderer.renderPart(matrices, consumers, light, stack, this.armorModel, this.armorTexture);
         // (renderPart handles glint + the correct RenderLayer for armor) :contentReference[oaicite:1]{index=1}
 
         // ---- 2) draw the wings (elytra) on top of the chestplate ----
