@@ -14,11 +14,10 @@ import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 
-public class ArmoredElytraFeatureRenderer<T extends BipedEntityRenderState, M extends BipedEntityModel<T>>
-        extends FeatureRenderer<T, M> {
-
+public class ArmoredElytraFeatureRenderer<T extends BipedEntityRenderState, M extends BipedEntityModel<T>> extends FeatureRenderer<T, M> {
     private final ElytraEntityModel adultModel;
     private final ElytraEntityModel babyModel;
     private final Identifier wingTexture;
@@ -39,14 +38,13 @@ public class ArmoredElytraFeatureRenderer<T extends BipedEntityRenderState, M ex
 
     @Override
     public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, T state, float limbAngle, float limbDistance) {
-
-        // BipedEntityRenderState exposes the equipped chest stack - use it
+        // Verify that this item is a chestplate and a glider
         ItemStack chest = state.equippedChestStack;
-        if (chest == null || !chest.contains(DataComponentTypes.GLIDER)) return;
+        if (chest == null || !chest.contains(DataComponentTypes.GLIDER) || chest.isOf(Items.ELYTRA)) return;
 
         final ElytraEntityModel model = state.baby ? this.babyModel : this.adultModel;
 
-        // Sync pose/angles with the current render state
+        // Draw the elytra model. Ensure the model matches the player state
         model.setAngles(state);
 
         VertexConsumer vc = ItemRenderer.getArmorGlintConsumer(
@@ -56,9 +54,4 @@ public class ArmoredElytraFeatureRenderer<T extends BipedEntityRenderState, M ex
         );
         model.render(matrices, vc, light, OverlayTexture.DEFAULT_UV);
     }
-
-//    @Override
-//    public void render(MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, T state, float limbAngle, float limbDistance) {
-//
-//    }
 }
