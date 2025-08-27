@@ -26,19 +26,15 @@ public class EndgameGearClient implements ClientModInitializer {
         LivingEntityFeatureRendererRegistrationCallback.EVENT.register(
                 (entityType, entityRenderer, registrationHelper, context) -> {
                     // only register for biped renderers (players, zombies, etc.)
-                    if (entityRenderer instanceof FeatureRendererContext<?, ?> ctx &&
-                            ((FeatureRendererContext<?, ?>) entityRenderer).getModel() instanceof BipedEntityModel<?>) {
+                    if (entityRenderer.getModel() instanceof BipedEntityModel<?>) {
                         // registrationHelper gives you context objects; pass loader and the texture you want
                         Identifier wingTex = Identifier.of("minecraft", "textures/entity/equipment/wings/elytra.png");
 
                         @SuppressWarnings("unchecked")
-                        FeatureRendererContext<BipedEntityRenderState, BipedEntityModel<BipedEntityRenderState>> playerCtx =
-                                (FeatureRendererContext<BipedEntityRenderState, BipedEntityModel<BipedEntityRenderState>>) ctx;
+                        FeatureRendererContext<BipedEntityRenderState, BipedEntityModel<BipedEntityRenderState>> ctx =
+                                (FeatureRendererContext<BipedEntityRenderState, BipedEntityModel<BipedEntityRenderState>>) entityRenderer;
 
-                        registrationHelper.register(new ArmoredElytraFeatureRenderer<>(
-                                playerCtx,
-                                wingTex
-                        ));
+                        registrationHelper.register(new ArmoredElytraFeatureRenderer<>(ctx, wingTex));
                     }
                 }
         );
