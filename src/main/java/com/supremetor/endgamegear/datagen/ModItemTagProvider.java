@@ -19,6 +19,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ModTags.Items.PRISMARINE_REPAIR)
                 .add(ModItems.PRISMARINE_INGOT);
 
+        valueLookupBuilder(ModTags.Items.DRAGONITE_REPAIR)
+                .add(ModItems.DRAGONITE_INGOT);
+
         valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.PRISMARINE_SWORD)
                 .add(ModItems.DRAGONITE_SWORD);
@@ -59,6 +62,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.DRAGONITE_BOOTS);
 
         valueLookupBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
-                .add(ModItems.PRISMARINE_INGOT);
+                .add(ModItems.PRISMARINE_INGOT)
+                .add(ModItems.DRAGONITE_INGOT);
     }
 }

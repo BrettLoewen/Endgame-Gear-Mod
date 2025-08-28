@@ -1,7 +1,8 @@
 // 1.21.8	-999999999-01-01T00:00:00	Endgame Gear/Tags for minecraft:item
+e9b271a3a016854fe29ec14bdce3f30a846b16c9 data/endgame-gear/tags/item/dragonite_repair.json
 48040bbdd7db55495d6ef7f8f643f2949bbe06ce data/endgame-gear/tags/item/prismarine_repair.json
 83a20a84fe28029fe8177896f2beaca125b52d3b data/minecraft/tags/item/axes.json
-48040bbdd7db55495d6ef7f8f643f2949bbe06ce data/minecraft/tags/item/beacon_payment_items.json
+51bd1ae8e5bfe2194886c91f6e8f9b7ef423df69 data/minecraft/tags/item/beacon_payment_items.json
 789cddc6b04e48ec86099e27d3486f76dec09540 data/minecraft/tags/item/enchantable/chest_armor.json
 1c374f136e5152e9534b0afaf928dda04f0627ae data/minecraft/tags/item/enchantable/foot_armor.json
 fc3502cecca147d53fc26100c5357463a8ec9196 data/minecraft/tags/item/enchantable/head_armor.json

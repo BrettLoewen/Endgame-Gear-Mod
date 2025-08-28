@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "endgame-gear:dragonite_scrap",
+    "endgame-gear:dragonite_scrap",
+    "endgame-gear:dragonite_scrap",
+    "endgame-gear:dragonite_scrap",
+    "endgame-gear:charoite",
+    "endgame-gear:charoite",
+    "endgame-gear:charoite",
+    "endgame-gear:charoite"
+  ],
+  "result": {
+    "count": 1,
+    "id": "endgame-gear:dragonite_ingot"
+  }
+}

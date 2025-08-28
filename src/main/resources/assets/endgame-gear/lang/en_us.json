@@ -2,10 +2,9 @@
   "item.endgame-gear.prismarine_ingot": "Prismarine Ingot",
   "item.endgame-gear.prismarine_scrap": "Prismarine Scrap",
 
-  "item.endgame-gear.prismarine_helmet": "Prismarine Helmet",
-  "item.endgame-gear.prismarine_chestplate": "Prismarine Chestplate",
-  "item.endgame-gear.prismarine_leggings": "Prismarine Leggings",
-  "item.endgame-gear.prismarine_boots": "Prismarine Boots",
+  "item.endgame-gear.dragonite_ingot": "Dragonite Ingot",
+  "item.endgame-gear.dragonite_scrap": "Dragonite Scrap",
+  "item.endgame-gear.charoite": "Charoite",
 
   "item.endgame-gear.prismarine_sword": "Prismarine Sword",
   "item.endgame-gear.prismarine_pickaxe": "Prismarine Pickaxe",
@@ -13,26 +12,38 @@
   "item.endgame-gear.prismarine_shovel": "Prismarine Shovel",
   "item.endgame-gear.prismarine_hoe": "Prismarine Hoe",
 
-  "item.endgame-gear.prismarine_upgrade_smithing_template": "Prismarine Upgrade",
-
-  "item.endgame-gear.smithing_template.prismarine_upgrade.additions_slot_description": "Add Prismarine Ingot",
-  "item.endgame-gear.smithing_template.prismarine_upgrade.applies_to": "Diamond Equipment",
-  "item.endgame-gear.smithing_template.prismarine_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
-  "item.endgame-gear.smithing_template.prismarine_upgrade.ingredients": "Prismarine Ingot",
-
-  "item.endgame-gear.dragonite_helmet": "Dragonite Helmet",
-  "item.endgame-gear.dragonite_chestplate": "Dragonite Chestplate",
-  "item.endgame-gear.dragonite_leggings": "Dragonite Leggings",
-  "item.endgame-gear.dragonite_boots": "Dragonite Boots",
-
   "item.endgame-gear.dragonite_sword": "Dragonite Sword",
   "item.endgame-gear.dragonite_pickaxe": "Dragonite Pickaxe",
   "item.endgame-gear.dragonite_axe": "Dragonite Axe",
   "item.endgame-gear.dragonite_shovel": "Dragonite Shovel",
   "item.endgame-gear.dragonite_hoe": "Dragonite Hoe",
 
+  "item.endgame-gear.prismarine_helmet": "Prismarine Helmet",
+  "item.endgame-gear.prismarine_chestplate": "Prismarine Chestplate",
+  "item.endgame-gear.prismarine_leggings": "Prismarine Leggings",
+  "item.endgame-gear.prismarine_boots": "Prismarine Boots",
+
+  "item.endgame-gear.dragonite_helmet": "Dragonite Helmet",
+  "item.endgame-gear.dragonite_chestplate": "Dragonite Chestplate",
+  "item.endgame-gear.dragonite_leggings": "Dragonite Leggings",
+  "item.endgame-gear.dragonite_boots": "Dragonite Boots",
+
+  "item.endgame-gear.prismarine_upgrade_smithing_template": "Prismarine Upgrade",
+  "item.endgame-gear.dragonite_upgrade_smithing_template": "Dragonite Upgrade",
+
+  "item.endgame-gear.smithing_template.prismarine_upgrade.additions_slot_description": "Add Prismarine Ingot",
+  "item.endgame-gear.smithing_template.prismarine_upgrade.applies_to": "Diamond Equipment",
+  "item.endgame-gear.smithing_template.prismarine_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
+  "item.endgame-gear.smithing_template.prismarine_upgrade.ingredients": "Prismarine Ingot",
+
+  "item.endgame-gear.smithing_template.dragonite_upgrade.additions_slot_description": "Add Dragonite Ingot",
+  "item.endgame-gear.smithing_template.dragonite_upgrade.applies_to": "Diamond Equipment",
+  "item.endgame-gear.smithing_template.dragonite_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
+  "item.endgame-gear.smithing_template.dragonite_upgrade.ingredients": "Dragonite Ingot",
+
   "itemgroup.endgame-gear.prismarine_items": "Prismarine Items",
   "itemgroup.endgame-gear.dragonite_items": "Dragonite Items",
+
 
   "block.endgame-gear.prismarine_block": "Block of Prismarine",
   "block.endgame-gear.prismarine_crystal": "Prismarine Crystal",

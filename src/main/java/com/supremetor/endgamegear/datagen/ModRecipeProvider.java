@@ -45,6 +45,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion("has_prismarine_scrap", this.conditionsFromItem(ModItems.PRISMARINE_SCRAP))
                         .offerTo(exporter);
 
+//                offerReversibleCompactingRecipesWithReverseRecipeGroup(
+//                        RecipeCategory.MISC, ModItems.PRISMARINE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMARINE_BLOCK,
+//                        "prismarine_ingot_from_prismarine_block", "prismarine_ingot"
+//                );
+                createShapeless(RecipeCategory.MISC, ModItems.DRAGONITE_INGOT)
+                        .input(ModItems.DRAGONITE_SCRAP, 4)
+                        .input(ModItems.CHAROITE, 4)
+                        .criterion("has_dragonite_scrap", this.conditionsFromItem(ModItems.DRAGONITE_SCRAP))
+                        .offerTo(exporter);
+
+
                 createShaped(RecipeCategory.COMBAT, Items.TRIDENT)
                         .pattern(" SS")
                         .pattern(" IS")
@@ -53,6 +64,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input('S', Items.PRISMARINE_SHARD)
                         .criterion(hasItem(ModItems.PRISMARINE_INGOT), conditionsFromItem(ModItems.PRISMARINE_INGOT))
                         .offerTo(exporter);
+
 
                 createShapeless(RecipeCategory.MISC, Items.PRISMARINE_SHARD, 4)
                         .input(Items.PRISMARINE, 1)
@@ -64,6 +76,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .input(ModBlocks.PRISMARINE_CRYSTAL, 1)
                         .criterion("has_prismarine_crystal", conditionsFromItem(ModBlocks.PRISMARINE_CRYSTAL))
                         .offerTo(exporter);
+
 
                 offerSmithingTemplateCopyingRecipe(ModItems.PRISMARINE_UPGRADE_SMITHING_TEMPLATE, Items.PRISMARINE);
 
@@ -86,6 +99,29 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         RecipeCategory.TOOLS, ModItems.PRISMARINE_SHOVEL, "prismarine_upgrade_shovel");
                 generateSmithingTransformRecipe(ModItems.PRISMARINE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, ModItems.PRISMARINE_INGOT,
                         RecipeCategory.TOOLS, ModItems.PRISMARINE_HOE, "prismarine_upgrade_hoe");
+
+
+                offerSmithingTemplateCopyingRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.END_STONE);
+
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HELMET, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.COMBAT, ModItems.DRAGONITE_HELMET, "dragonite_upgrade_helmet");
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_CHESTPLATE, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.COMBAT, ModItems.DRAGONITE_CHESTPLATE, "dragonite_upgrade_chestplate");
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_LEGGINGS, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.COMBAT, ModItems.DRAGONITE_LEGGINGS, "dragonite_upgrade_leggings");
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_BOOTS, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.COMBAT, ModItems.DRAGONITE_BOOTS, "dragonite_upgrade_boots");
+
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SWORD, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.COMBAT, ModItems.DRAGONITE_SWORD, "dragonite_upgrade_sword");
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_PICKAXE, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.TOOLS, ModItems.DRAGONITE_PICKAXE, "dragonite_upgrade_pickaxe");
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_AXE, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.COMBAT, ModItems.DRAGONITE_AXE, "dragonite_upgrade_axe");
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_SHOVEL, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.TOOLS, ModItems.DRAGONITE_SHOVEL, "dragonite_upgrade_shovel");
+                generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, ModItems.DRAGONITE_INGOT,
+                        RecipeCategory.TOOLS, ModItems.DRAGONITE_HOE, "dragonite_upgrade_hoe");
             }
 
             private void generateSmithingTransformRecipe(Item template, Item appliesTo, Item ingredient, RecipeCategory recipeCategory,

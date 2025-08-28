@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "endgame-gear:dragonite_ingot",
+  "base": "minecraft:diamond_leggings",
+  "result": {
+    "id": "endgame-gear:dragonite_leggings"
+  },
+  "template": "endgame-gear:dragonite_upgrade_smithing_template"
+}

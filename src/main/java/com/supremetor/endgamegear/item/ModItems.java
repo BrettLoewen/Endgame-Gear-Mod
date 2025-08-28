@@ -23,6 +23,10 @@ public class ModItems {
     public static final Item PRISMARINE_INGOT = registerItem("prismarine_ingot", Item::new);
     public static final Item PRISMARINE_SCRAP = registerItem("prismarine_scrap", Item::new);
 
+    public static final Item DRAGONITE_INGOT = registerItem("dragonite_ingot", Item::new);
+    public static final Item DRAGONITE_SCRAP = registerItem("dragonite_scrap", Item::new);
+    public static final Item CHAROITE = registerItem("charoite", Item::new);
+
     public static final Item PRISMARINE_SWORD = registerItem("prismarine_sword",
             setting -> new Item(setting.sword(ModToolMaterials.PRISMARINE, 3.0f, -2.4f)));
     public static final Item PRISMARINE_PICKAXE = registerItem("prismarine_pickaxe",
@@ -70,12 +74,22 @@ public class ModItems {
                     Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.ingredients").formatted(Formatting.BLUE),
                     Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.base_slot_description"),
                     Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.additions_slot_description"),
-                    getPrismarineUpgradeEmptyBaseSlotTextures(),
-                    getPrismarineUpgradeEmptyAdditionsSlotTextures(),
+                    getUpgradeEmptyBaseSlotTextures(),
+                    getUpgradeEmptyAdditionsSlotTextures(),
+                    setting.rarity(Rarity.UNCOMMON)));
+
+    public static final Item DRAGONITE_UPGRADE_SMITHING_TEMPLATE = registerItem("dragonite_upgrade_smithing_template",
+            setting -> new SmithingTemplateItem(
+                    Text.translatable("item.endgame-gear.smithing_template.dragonite_upgrade.applies_to").formatted(Formatting.BLUE),
+                    Text.translatable("item.endgame-gear.smithing_template.dragonite_upgrade.ingredients").formatted(Formatting.BLUE),
+                    Text.translatable("item.endgame-gear.smithing_template.dragonite_upgrade.base_slot_description"),
+                    Text.translatable("item.endgame-gear.smithing_template.dragonite_upgrade.additions_slot_description"),
+                    getUpgradeEmptyBaseSlotTextures(),
+                    getUpgradeEmptyAdditionsSlotTextures(),
                     setting.rarity(Rarity.UNCOMMON)));
 
     // From SmithingTemplateItem.java
-    private static List<Identifier> getPrismarineUpgradeEmptyBaseSlotTextures() {
+    private static List<Identifier> getUpgradeEmptyBaseSlotTextures() {
         return List.of(
                 Identifier.ofVanilla("container/slot/helmet"),
                 Identifier.ofVanilla("container/slot/chestplate"),
@@ -90,7 +104,7 @@ public class ModItems {
     }
 
     // From SmithingTemplateItem.java
-    private static List<Identifier> getPrismarineUpgradeEmptyAdditionsSlotTextures() {
+    private static List<Identifier> getUpgradeEmptyAdditionsSlotTextures() {
         return List.of(Identifier.ofVanilla("container/slot/ingot"));
     }
 
@@ -111,11 +125,23 @@ public class ModItems {
 
             entries.add(PRISMARINE_SWORD);
             entries.add(PRISMARINE_AXE);
+
+            entries.add(DRAGONITE_HELMET);
+            entries.add(DRAGONITE_CHESTPLATE);
+            entries.add(DRAGONITE_LEGGINGS);
+            entries.add(DRAGONITE_BOOTS);
+
+            entries.add(DRAGONITE_SWORD);
+            entries.add(DRAGONITE_AXE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
             entries.add(PRISMARINE_INGOT);
             entries.add(PRISMARINE_UPGRADE_SMITHING_TEMPLATE);
+
+            entries.add(DRAGONITE_INGOT);
+            entries.add(DRAGONITE_UPGRADE_SMITHING_TEMPLATE);
+            entries.add(CHAROITE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
@@ -123,6 +149,11 @@ public class ModItems {
             entries.add(PRISMARINE_AXE);
             entries.add(PRISMARINE_SHOVEL);
             entries.add(PRISMARINE_HOE);
+
+            entries.add(DRAGONITE_PICKAXE);
+            entries.add(DRAGONITE_AXE);
+            entries.add(DRAGONITE_SHOVEL);
+            entries.add(DRAGONITE_HOE);
         });
     }
 }

@@ -26,6 +26,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PRISMARINE_SCRAP, Models.GENERATED);
         itemModelGenerator.register(ModItems.PRISMARINE_INGOT, Models.GENERATED);
 
+        itemModelGenerator.register(ModItems.DRAGONITE_SCRAP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRAGONITE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.CHAROITE, Models.GENERATED);
+
         itemModelGenerator.register(ModItems.PRISMARINE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PRISMARINE_PICKAXE, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PRISMARINE_AXE, Models.HANDHELD);
@@ -49,5 +53,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor(ModItems.DRAGONITE_BOOTS, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
         itemModelGenerator.register(ModItems.PRISMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
     }
 }
