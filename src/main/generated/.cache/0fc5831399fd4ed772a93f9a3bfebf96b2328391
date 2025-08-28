@@ -1,9 +1,13 @@
 // 1.21.8	-999999999-01-01T00:00:00	Endgame Gear/Tags for minecraft:item
 48040bbdd7db55495d6ef7f8f643f2949bbe06ce data/endgame-gear/tags/item/prismarine_repair.json
-6061636eb4e8ce8bfe57cb6f86442763dee06973 data/minecraft/tags/item/axes.json
+83a20a84fe28029fe8177896f2beaca125b52d3b data/minecraft/tags/item/axes.json
 48040bbdd7db55495d6ef7f8f643f2949bbe06ce data/minecraft/tags/item/beacon_payment_items.json
-d988375f73b1083fe8e9fc4d131f813fed3c9afd data/minecraft/tags/item/hoes.json
-e395167e6decc2c800589c68e79b82f9c3d0994b data/minecraft/tags/item/pickaxes.json
-85b6bda3e98e262e486a30777902d741fd3f9940 data/minecraft/tags/item/shovels.json
-ad620a84a5f5b22b9132734dc5c622b98f22a50e data/minecraft/tags/item/swords.json
+789cddc6b04e48ec86099e27d3486f76dec09540 data/minecraft/tags/item/enchantable/chest_armor.json
+1c374f136e5152e9534b0afaf928dda04f0627ae data/minecraft/tags/item/enchantable/foot_armor.json
+fc3502cecca147d53fc26100c5357463a8ec9196 data/minecraft/tags/item/enchantable/head_armor.json
+e29e585e4dd9398d32cdcc0a449829dceca52cd3 data/minecraft/tags/item/enchantable/leg_armor.json
+ab652f1cf19ab64650fcf09029bd58d589659a82 data/minecraft/tags/item/hoes.json
+e01ff2f0afa083c6426d3e2f89e03504ae22974d data/minecraft/tags/item/pickaxes.json
+8156918e3fb84749f4c39d7963d6a72337edeb50 data/minecraft/tags/item/shovels.json
+0566bb66429c55ef713a559328060f924636e65f data/minecraft/tags/item/swords.json
 c82bf3fe4303d29dfc0df0bd3b41411304c37301 data/minecraft/tags/item/trimmable_armor.json

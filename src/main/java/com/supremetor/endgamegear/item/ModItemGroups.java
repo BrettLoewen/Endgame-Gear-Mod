@@ -62,6 +62,12 @@ public class ModItemGroups {
                         entries.add(ModItems.DRAGONITE_CHESTPLATE);
                         entries.add(ModItems.DRAGONITE_LEGGINGS);
                         entries.add(ModItems.DRAGONITE_BOOTS);
+
+                        entries.add(ModItems.DRAGONITE_SWORD);
+                        entries.add(ModItems.DRAGONITE_PICKAXE);
+                        entries.add(ModItems.DRAGONITE_AXE);
+                        entries.add(ModItems.DRAGONITE_SHOVEL);
+                        entries.add(ModItems.DRAGONITE_HOE);
                     }).build());
 
     public static void registerItemGroups() {

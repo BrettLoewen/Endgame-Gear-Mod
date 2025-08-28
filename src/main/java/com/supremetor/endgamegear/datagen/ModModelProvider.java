@@ -32,16 +32,22 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PRISMARINE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.PRISMARINE_HOE, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.DRAGONITE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DRAGONITE_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DRAGONITE_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DRAGONITE_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.DRAGONITE_HOE, Models.HANDHELD);
+
         itemModelGenerator.registerArmor(ModItems.PRISMARINE_HELMET, ModArmorMaterials.PRISMARINE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.PRISMARINE_CHESTPLATE, ModArmorMaterials.PRISMARINE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.PRISMARINE_LEGGINGS, ModArmorMaterials.PRISMARINE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.PRISMARINE_BOOTS, ModArmorMaterials.PRISMARINE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
 
-        itemModelGenerator.register(ModItems.PRISMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
-
         itemModelGenerator.registerArmor(ModItems.DRAGONITE_HELMET, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.DRAGONITE_CHESTPLATE, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.DRAGONITE_LEGGINGS, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.DRAGONITE_BOOTS, ModArmorMaterials.DRAGONITE_KEY, ItemModelGenerator.BOOTS_TRIM_ID_PREFIX, false);
+
+        itemModelGenerator.register(ModItems.PRISMARINE_UPGRADE_SMITHING_TEMPLATE, Models.GENERATED);
     }
 }

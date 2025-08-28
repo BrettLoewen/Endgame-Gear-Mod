@@ -20,15 +20,33 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.PRISMARINE_INGOT);
 
         valueLookupBuilder(ItemTags.SWORDS)
-                .add(ModItems.PRISMARINE_SWORD);
+                .add(ModItems.PRISMARINE_SWORD)
+                .add(ModItems.DRAGONITE_SWORD);
         valueLookupBuilder(ItemTags.PICKAXES)
-                .add(ModItems.PRISMARINE_PICKAXE);
+                .add(ModItems.PRISMARINE_PICKAXE)
+                .add(ModItems.DRAGONITE_PICKAXE);
         valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.PRISMARINE_AXE);
+                .add(ModItems.PRISMARINE_AXE)
+                .add(ModItems.DRAGONITE_AXE);
         valueLookupBuilder(ItemTags.SHOVELS)
-                .add(ModItems.PRISMARINE_SHOVEL);
+                .add(ModItems.PRISMARINE_SHOVEL)
+                .add(ModItems.DRAGONITE_SHOVEL);
         valueLookupBuilder(ItemTags.HOES)
-                .add(ModItems.PRISMARINE_HOE);
+                .add(ModItems.PRISMARINE_HOE)
+                .add(ModItems.DRAGONITE_HOE);
+
+        valueLookupBuilder(ItemTags.HEAD_ARMOR_ENCHANTABLE)
+                .add(ModItems.PRISMARINE_HELMET)
+                .add(ModItems.DRAGONITE_HELMET);
+        valueLookupBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+                .add(ModItems.PRISMARINE_CHESTPLATE)
+                .add(ModItems.DRAGONITE_CHESTPLATE);
+        valueLookupBuilder(ItemTags.LEG_ARMOR_ENCHANTABLE)
+                .add(ModItems.PRISMARINE_LEGGINGS)
+                .add(ModItems.DRAGONITE_LEGGINGS);
+        valueLookupBuilder(ItemTags.FOOT_ARMOR_ENCHANTABLE)
+                .add(ModItems.PRISMARINE_BOOTS)
+                .add(ModItems.DRAGONITE_BOOTS);
 
         valueLookupBuilder(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.PRISMARINE_HELMET)

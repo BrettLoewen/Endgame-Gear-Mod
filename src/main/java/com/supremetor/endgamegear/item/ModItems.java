@@ -34,6 +34,17 @@ public class ModItems {
     public static final Item PRISMARINE_HOE = registerItem("prismarine_hoe",
             setting -> new HoeItem(ModToolMaterials.PRISMARINE, -4.0f, 0f, setting));
 
+    public static final Item DRAGONITE_SWORD = registerItem("dragonite_sword",
+            setting -> new Item(setting.sword(ModToolMaterials.DRAGONITE, 3.0f, -2.4f)));
+    public static final Item DRAGONITE_PICKAXE = registerItem("dragonite_pickaxe",
+            setting -> new Item(setting.pickaxe(ModToolMaterials.DRAGONITE, 1, -2.8f)));
+    public static final Item DRAGONITE_AXE = registerItem("dragonite_axe",
+            setting -> new AxeItem(ModToolMaterials.DRAGONITE, 5.0f, -3.0f, setting));
+    public static final Item DRAGONITE_SHOVEL = registerItem("dragonite_shovel",
+            setting -> new ShovelItem(ModToolMaterials.DRAGONITE, 1.5f, -3.0f, setting));
+    public static final Item DRAGONITE_HOE = registerItem("dragonite_hoe",
+            setting -> new HoeItem(ModToolMaterials.DRAGONITE, -4.0f, 0f, setting));
+
     public static final Item PRISMARINE_HELMET = registerItem("prismarine_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.PRISMARINE_ARMOR_MATERIAL, EquipmentType.HELMET)));
     public static final Item PRISMARINE_CHESTPLATE = registerItem("prismarine_chestplate",
@@ -42,16 +53,6 @@ public class ModItems {
             setting -> new Item(setting.armor(ModArmorMaterials.PRISMARINE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
     public static final Item PRISMARINE_BOOTS = registerItem("prismarine_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.PRISMARINE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
-
-    public static final Item PRISMARINE_UPGRADE_SMITHING_TEMPLATE = registerItem("prismarine_upgrade_smithing_template",
-            setting -> new SmithingTemplateItem(
-                    Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.applies_to").formatted(Formatting.BLUE),
-                    Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.ingredients").formatted(Formatting.BLUE),
-                    Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.base_slot_description"),
-                    Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.additions_slot_description"),
-                    getPrismarineUpgradeEmptyBaseSlotTextures(),
-                    getPrismarineUpgradeEmptyAdditionsSlotTextures(),
-                    setting.rarity(Rarity.UNCOMMON)));
 
     public static final Item DRAGONITE_HELMET = registerItem("dragonite_helmet",
             setting -> new ModArmorItem(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.HELMET)));
@@ -62,6 +63,16 @@ public class ModItems {
             setting -> new Item(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.LEGGINGS)));
     public static final Item DRAGONITE_BOOTS = registerItem("dragonite_boots",
             setting -> new Item(setting.armor(ModArmorMaterials.DRAGONITE_ARMOR_MATERIAL, EquipmentType.BOOTS)));
+
+    public static final Item PRISMARINE_UPGRADE_SMITHING_TEMPLATE = registerItem("prismarine_upgrade_smithing_template",
+            setting -> new SmithingTemplateItem(
+                    Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.applies_to").formatted(Formatting.BLUE),
+                    Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.ingredients").formatted(Formatting.BLUE),
+                    Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.base_slot_description"),
+                    Text.translatable("item.endgame-gear.smithing_template.prismarine_upgrade.additions_slot_description"),
+                    getPrismarineUpgradeEmptyBaseSlotTextures(),
+                    getPrismarineUpgradeEmptyAdditionsSlotTextures(),
+                    setting.rarity(Rarity.UNCOMMON)));
 
     // From SmithingTemplateItem.java
     private static List<Identifier> getPrismarineUpgradeEmptyBaseSlotTextures() {
