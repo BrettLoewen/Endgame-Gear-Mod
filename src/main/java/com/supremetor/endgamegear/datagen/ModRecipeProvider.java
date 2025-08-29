@@ -157,6 +157,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "Prismarine Recipes";
+        return "Endgame Gear Recipes";
     }
 }
