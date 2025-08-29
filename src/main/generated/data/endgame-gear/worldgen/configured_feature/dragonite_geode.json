@@ -1,77 +1,20 @@
 {
-  "type": "minecraft:geode",
+  "type": "endgame-gear:geode_sky",
   "config": {
-    "blocks": {
-      "alternate_inner_layer_provider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "endgame-gear:void_debris"
-        }
-      },
-      "cannot_replace": "#minecraft:features_cannot_replace",
-      "filling_provider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "minecraft:air"
-        }
-      },
-      "inner_layer_provider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "endgame-gear:charoite_block"
-        }
-      },
-      "inner_placements": [
-        {
-          "Name": "minecraft:air"
-        }
-      ],
-      "invalid_blocks": "#minecraft:geode_invalid_blocks",
-      "middle_layer_provider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "minecraft:smooth_basalt"
-        }
-      },
-      "outer_layer_provider": {
-        "type": "minecraft:simple_state_provider",
-        "state": {
-          "Name": "minecraft:end_stone"
-        }
-      }
+    "inner_block": {
+      "Name": "endgame-gear:charoite_block"
     },
-    "crack": {
-      "base_crack_size": 2.5,
-      "crack_point_offset": 2,
-      "generate_crack_chance": 0.95
+    "outer_block": {
+      "Name": "minecraft:end_stone"
     },
-    "distribution_points": {
+    "radius": 3,
+    "special_block": {
+      "Name": "endgame-gear:void_debris"
+    },
+    "special_count": {
       "type": "minecraft:uniform",
       "max_inclusive": 4,
       "min_inclusive": 2
-    },
-    "invalid_blocks_threshold": 1,
-    "layers": {
-      "filling": 1.3,
-      "inner_layer": 1.8,
-      "middle_layer": 2.5,
-      "outer_layer": 3.0
-    },
-    "max_gen_offset": 16,
-    "min_gen_offset": -16,
-    "noise_multiplier": 0.05,
-    "outer_wall_distance": {
-      "type": "minecraft:uniform",
-      "max_inclusive": 6,
-      "min_inclusive": 4
-    },
-    "placements_require_layer0_alternate": true,
-    "point_offset": {
-      "type": "minecraft:uniform",
-      "max_inclusive": 2,
-      "min_inclusive": 1
-    },
-    "use_alternate_layer0_chance": 0.1,
-    "use_potential_placements_chance": 1.0
+    }
   }
 }
