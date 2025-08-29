@@ -1,9 +1,14 @@
 // 1.21.8	-999999999-01-01T00:00:00	Endgame Gear/Model Definitions
+b19009cd41c8b609c7d2252a1b30ee7941b20b1d assets/endgame-gear/blockstates/charoite_block.json
+08868a45fbea9f60b0b9275d2d034cdb47a3db4d assets/endgame-gear/blockstates/dragonite_block.json
 763872a37fdf6cb9b500cdd9ae2a895e4ad52af1 assets/endgame-gear/blockstates/prismarine_block.json
 7862f2b99f5a431479b526fc1bc1420f15cdfa1b assets/endgame-gear/blockstates/prismarine_crystal.json
 9c042965bf050b6a4776cd2ace126d74655361e0 assets/endgame-gear/blockstates/prismatic_debris.json
+173557da8486c3fc648124e982aaa84d9a73124c assets/endgame-gear/blockstates/void_debris.json
 7fb2b0166451b5f9807116336c62e51802e5d48a assets/endgame-gear/items/charoite.json
+9e146b26a12c13878407c3e6739e281a1ce42554 assets/endgame-gear/items/charoite_block.json
 b7705f6a16cd0911a4d364e3a805330ed3f5bfe7 assets/endgame-gear/items/dragonite_axe.json
+a9a16c72d9a97db11e3ede05aba1f6e028cc1ec6 assets/endgame-gear/items/dragonite_block.json
 57e310a38fe6d7def5de8c98d13c765b88d8bfdc assets/endgame-gear/items/dragonite_boots.json
 b066f71f4d3ddcfd1ee412944d14ac4b34ad307d assets/endgame-gear/items/dragonite_chestplate.json
 e71643b901e78d7b6a016e8f14c200f8e032259f assets/endgame-gear/items/dragonite_helmet.json
@@ -30,9 +35,13 @@ d3a022d3a50d908039cd32460691077bf1fe7e44 assets/endgame-gear/items/prismarine_sh
 6425b0f49a9b12a14b01d6b5698a90dee780a95a assets/endgame-gear/items/prismarine_sword.json
 a84b4802a6baab9e5f51ceb230e7e73f1233e17b assets/endgame-gear/items/prismarine_upgrade_smithing_template.json
 b1faf91734b69e9dd5f1cb90ca8182da98a83173 assets/endgame-gear/items/prismatic_debris.json
+5c562c52336bce11b2c31f22e5b16ac09f364cd2 assets/endgame-gear/items/void_debris.json
+233f9d12528949c232f2898f1faf6fd826027392 assets/endgame-gear/models/block/charoite_block.json
+6b515188818eae240d1d89919735a1932f39e974 assets/endgame-gear/models/block/dragonite_block.json
 1622f0c2c432f7414abe3f8ecb12d679ecd31243 assets/endgame-gear/models/block/prismarine_block.json
 fd292df797d0bb763bd8fd001f1d6fa462f71d2e assets/endgame-gear/models/block/prismarine_crystal.json
 7502b61bb5a5a7da6b9317858074074bf01e3a59 assets/endgame-gear/models/block/prismatic_debris.json
+35acaf3e7a76120295ef5a9cb527e5647794b72c assets/endgame-gear/models/block/void_debris.json
 37bdce40e670ba0f9aa1a7d8594fdf386d1d2420 assets/endgame-gear/models/item/charoite.json
 99528df290f6730d11831e2d612b43809cd7d5a5 assets/endgame-gear/models/item/dragonite_axe.json
 b8b32aad38767f187def13b3f92f065abddf6faa assets/endgame-gear/models/item/dragonite_boots.json

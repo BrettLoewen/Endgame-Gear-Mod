@@ -2,6 +2,9 @@
   "values": [
     "endgame-gear:prismarine_block",
     "endgame-gear:prismatic_debris",
-    "endgame-gear:prismarine_crystal"
+    "endgame-gear:prismarine_crystal",
+    "endgame-gear:dragonite_block",
+    "endgame-gear:void_debris",
+    "endgame-gear:charoite_block"
   ]
 }

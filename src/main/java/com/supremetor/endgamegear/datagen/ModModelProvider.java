@@ -19,6 +19,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRISMARINE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRISMATIC_DEBRIS);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PRISMARINE_CRYSTAL);
+
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.DRAGONITE_BLOCK);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOID_DEBRIS);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.CHAROITE_BLOCK);
     }
 
     @Override
