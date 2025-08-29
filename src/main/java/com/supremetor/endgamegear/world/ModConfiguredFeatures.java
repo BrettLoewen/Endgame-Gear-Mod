@@ -6,7 +6,6 @@ import com.supremetor.endgamegear.world.custom.BlockPillarGrowthConfig;
 import com.supremetor.endgamegear.world.custom.GeodeSkyConfig;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
@@ -20,8 +19,6 @@ import net.minecraft.util.math.intprovider.WeightedListIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
-
-import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> PRISMARINE_PILLAR_KEY = registerKey("prismarine_pillar");
@@ -78,31 +75,6 @@ public class ModConfiguredFeatures {
                 CHAROITE_PILLAR_HEIGHT_PROVIDER,
                 false
         ));
-
-//        register(context, DRAGONITE_GEODE_KEY, Feature.GEODE, new GeodeFeatureConfig(
-//                new GeodeLayerConfig(
-//                        BlockStateProvider.of(Blocks.AIR),
-//                        BlockStateProvider.of(ModBlocks.CHAROITE_BLOCK),
-//                        BlockStateProvider.of(ModBlocks.VOID_DEBRIS),
-//                        BlockStateProvider.of(Blocks.SMOOTH_BASALT),
-//                        BlockStateProvider.of(Blocks.END_STONE),
-//                        List.of(Blocks.AIR.getDefaultState()),  // The decorations inside the geode. An empty list causes errors, so just use air
-//                        BlockTags.FEATURES_CANNOT_REPLACE,
-//                        BlockTags.GEODE_INVALID_BLOCKS
-//                ),
-//                new GeodeLayerThicknessConfig(1.3, 1.8, 2.5, 3.0),
-//                new GeodeCrackConfig(0.95, 2.5, 2),
-//                1.0,
-//                0.1,
-//                true,
-//                UniformIntProvider.create(4, 6), // Irregularity / lumpiness of geode
-//                UniformIntProvider.create(2, 4), // Distribution of alternative layer
-//                UniformIntProvider.create(1, 2),
-//                -16,
-//                16,
-//                0.05,
-//                1
-//        ));
 
         register(context, DRAGONITE_GEODE_KEY, ModFeatures.GEODE_SKY, new GeodeSkyConfig(
                 Blocks.END_STONE.getDefaultState(),
