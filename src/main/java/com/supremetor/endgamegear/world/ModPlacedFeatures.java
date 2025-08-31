@@ -14,6 +14,8 @@ import java.util.List;
 
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> PRISMARINE_PILLAR_PLACED_KEY = registerKey("prismarine_pillar_placed");
+    public static final RegistryKey<PlacedFeature> CHAROITE_PILLAR_PLACED_KEY = registerKey("charoite_pillar_placed");
+    public static final RegistryKey<PlacedFeature> DRAGONITE_GEODE_PLACED_KEY = registerKey("dragonite_geode_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -21,6 +23,14 @@ public class ModPlacedFeatures {
         register(context, PRISMARINE_PILLAR_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.PRISMARINE_PILLAR_KEY),
                 ModOrePlacement.modifiersWithRarity(8,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(20), YOffset.fixed(50))));
+
+        register(context, CHAROITE_PILLAR_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CHAROITE_PILLAR_KEY),
+                ModOrePlacement.modifiersWithRarity(12,
+                        HeightRangePlacementModifier.trapezoid(YOffset.fixed(50), YOffset.fixed(70))));
+
+        register(context, DRAGONITE_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DRAGONITE_GEODE_KEY),
+                ModOrePlacement.modifiersWithRarity(100,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(70), YOffset.fixed(200))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

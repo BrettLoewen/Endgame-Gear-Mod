@@ -41,5 +41,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of(EndgameGear.MOD_ID, "prismarine_pillar_surfaces")))
                 .add(Blocks.GRAVEL)
                 .add(Blocks.SAND);
+
+        valueLookupBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of(EndgameGear.MOD_ID, "charoite_pillar_surfaces")))
+                .add(Blocks.END_STONE);
     }
 }
