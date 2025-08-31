@@ -55,7 +55,7 @@ public class ModItemGroups {
 
     public static final ItemGroup DRAGONITE_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(EndgameGear.MOD_ID, "dragonite_items"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(Blocks.END_STONE))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.DRAGONITE_INGOT))
                     .displayName(Text.translatable("itemgroup.endgame-gear.dragonite_items"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.VOID_DEBRIS);
