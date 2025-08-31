@@ -14,7 +14,6 @@ import net.minecraft.registry.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.IntProvider;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.math.intprovider.WeightedListIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
@@ -25,6 +24,7 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> CHAROITE_PILLAR_KEY = registerKey("charoite_pillar");
     public static final RegistryKey<ConfiguredFeature<?, ?>> DRAGONITE_GEODE_KEY = registerKey("dragonite_geode");
 
+    // ===== Prismarine Pillar =====
     private static final WeightedBlockStateProvider PRISMARINE_PILLAR_INNER_BLOCKS = new WeightedBlockStateProvider(Pool.<BlockState>builder()
             .add(Blocks.PRISMARINE.getDefaultState(), 3)
             .add(ModBlocks.PRISMARINE_CRYSTAL.getDefaultState(), 3)
@@ -43,6 +43,7 @@ public class ModConfiguredFeatures {
             .add(ConstantIntProvider.create(10), 1)
             .build());
 
+    // ===== Charoite Pillar =====
     private static final WeightedBlockStateProvider CHAROITE_PILLAR_INNER_BLOCKS = new WeightedBlockStateProvider(Pool.<BlockState>builder()
             .add(ModBlocks.CHAROITE_BLOCK.getDefaultState(), 1)
             .build());
@@ -59,9 +60,10 @@ public class ModConfiguredFeatures {
             .add(ConstantIntProvider.create(15), 1)
             .build());
 
+    // ===== Dragonite Geode =====
     private static final WeightedBlockStateProvider DRAGONITE_GEODE_INNER_BLOCKS = new WeightedBlockStateProvider(Pool.<BlockState>builder()
             .add(ModBlocks.CHAROITE_BLOCK.getDefaultState(), 3)
-            .add(Blocks.OBSIDIAN.getDefaultState(), 1)
+            .add(Blocks.SMOOTH_BASALT.getDefaultState(), 1)
             .build());
 
     private static final IntProvider DRAGONITE_GEODE_RADIUS_PROVIDER = new WeightedListIntProvider(Pool.<IntProvider>builder()
@@ -77,6 +79,19 @@ public class ModConfiguredFeatures {
             .add(ConstantIntProvider.create(4), 2)
             .build());
 
+    private static final IntProvider DRAGONITE_GEODE_CRACK_COUNT_PROVIDER = new WeightedListIntProvider(Pool.<IntProvider>builder()
+            .add(ConstantIntProvider.create(1), 13)
+            .add(ConstantIntProvider.create(2), 6)
+            .add(ConstantIntProvider.create(3), 1)
+            .build());
+
+    private static final IntProvider DRAGONITE_GEODE_CRACK_WIDTH_PROVIDER = new WeightedListIntProvider(Pool.<IntProvider>builder()
+            .add(ConstantIntProvider.create(20), 1)
+            .add(ConstantIntProvider.create(25), 6)
+            .add(ConstantIntProvider.create(30), 3)
+            .build());
+
+    // ===== Registration =====
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, PRISMARINE_PILLAR_KEY, ModFeatures.BLOCK_PILLAR_GROWTH, new BlockPillarGrowthConfig(
                 PRISMARINE_PILLAR_INNER_BLOCKS,
@@ -95,11 +110,13 @@ public class ModConfiguredFeatures {
         ));
 
         register(context, DRAGONITE_GEODE_KEY, ModFeatures.GEODE_SKY, new GeodeSkyConfig(
-                BlockStateProvider.of(Blocks.SMOOTH_BASALT),
+                BlockStateProvider.of(Blocks.OBSIDIAN),
                 DRAGONITE_GEODE_INNER_BLOCKS,
                 BlockStateProvider.of(ModBlocks.VOID_DEBRIS),
                 DRAGONITE_GEODE_RADIUS_PROVIDER,
-                DRAGONITE_GEODE_SPECIAL_COUNT_PROVIDER
+                DRAGONITE_GEODE_SPECIAL_COUNT_PROVIDER,
+                DRAGONITE_GEODE_CRACK_COUNT_PROVIDER,
+                DRAGONITE_GEODE_CRACK_WIDTH_PROVIDER
         ));
     }
 
