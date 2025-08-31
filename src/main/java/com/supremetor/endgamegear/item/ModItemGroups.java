@@ -58,8 +58,11 @@ public class ModItemGroups {
             FabricItemGroup.builder().icon(() -> new ItemStack(Blocks.END_STONE))
                     .displayName(Text.translatable("itemgroup.endgame-gear.dragonite_items"))
                     .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.VOID_DEBRIS);
                         entries.add(ModItems.DRAGONITE_SCRAP);
                         entries.add(ModItems.DRAGONITE_INGOT);
+                        entries.add(ModBlocks.DRAGONITE_BLOCK);
+                        entries.add(ModBlocks.CHAROITE_BLOCK);
                         entries.add(ModItems.CHAROITE);
 
                         entries.add(ModItems.DRAGONITE_HELMET);

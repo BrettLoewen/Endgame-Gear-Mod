@@ -29,6 +29,16 @@ public class ModBlocks {
             properties -> new Block(properties.mapColor(MapColor.CYAN).instrument(NoteBlockInstrument.BASEDRUM)
                     .requiresTool().strength(1F).luminance(state -> 2)));
 
+    public static final Block DRAGONITE_BLOCK = registerBlock("dragonite_block",
+            properties -> new Block(properties.mapColor(MapColor.BLACK).requiresTool()
+                    .strength(50.0F, 1200.0F).sounds(BlockSoundGroup.NETHERITE)));
+    public static final Block VOID_DEBRIS = registerBlock("void_debris",
+            properties -> new Block(properties.mapColor(MapColor.BLACK).requiresTool()
+                    .strength(30.0F, 1200.0F).sounds(BlockSoundGroup.ANCIENT_DEBRIS)));
+    public static final Block CHAROITE_BLOCK = registerBlock("charoite_block",
+            properties -> new Block(properties.mapColor(MapColor.PURPLE).instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresTool().strength(1F).luminance(state -> 2)));
+
     private static Block registerBlock(String name, Function<AbstractBlock.Settings, Block> function) {
         Block toRegister = function.apply(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(EndgameGear.MOD_ID, name))));
         registerBlockItem(name, toRegister);
@@ -46,6 +56,17 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.PRISMARINE_BLOCK);
+            entries.add(ModBlocks.PRISMARINE_CRYSTAL);
+
+            entries.add(ModBlocks.DRAGONITE_BLOCK);
+            entries.add(ModBlocks.CHAROITE_BLOCK);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(entries -> {
+            entries.add(ModBlocks.PRISMATIC_DEBRIS);
+
+            entries.add(ModBlocks.VOID_DEBRIS);
+            entries.add(ModBlocks.CHAROITE_BLOCK);
         });
     }
 }

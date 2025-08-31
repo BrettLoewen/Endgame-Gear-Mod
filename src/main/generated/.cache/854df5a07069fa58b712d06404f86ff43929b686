@@ -1,4 +1,7 @@
 // 1.21.8	-999999999-01-01T00:00:00	Endgame Gear/Block Loot Tables
+35a336163b31c69878a02b720a2f10b259ea8af5 data/endgame-gear/loot_table/blocks/charoite_block.json
+3726b05427d8df70ad3aa4ae8d8c7a2224314091 data/endgame-gear/loot_table/blocks/dragonite_block.json
 f644a91842e1ea4ab6dff1dc34e1e2c0e817022b data/endgame-gear/loot_table/blocks/prismarine_block.json
 8dd06f1531a21f59cf4353cb63d024d1cb6a8642 data/endgame-gear/loot_table/blocks/prismarine_crystal.json
 a57eea8427679f968d71571d6b05f467b3e6d1b0 data/endgame-gear/loot_table/blocks/prismatic_debris.json
+fc09ff8029218897ae9963326fac452c095faee0 data/endgame-gear/loot_table/blocks/void_debris.json

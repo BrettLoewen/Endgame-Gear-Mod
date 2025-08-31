@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "dragonite_ingot",
+  "ingredients": [
+    "endgame-gear:dragonite_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "endgame-gear:dragonite_ingot"
+  }
+}

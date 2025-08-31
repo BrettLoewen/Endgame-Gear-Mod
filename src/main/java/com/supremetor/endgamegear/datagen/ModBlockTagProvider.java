@@ -23,17 +23,26 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.PRISMARINE_BLOCK)
                 .add(ModBlocks.PRISMATIC_DEBRIS)
-                .add(ModBlocks.PRISMARINE_CRYSTAL);
+                .add(ModBlocks.PRISMARINE_CRYSTAL)
+                .add(ModBlocks.DRAGONITE_BLOCK)
+                .add(ModBlocks.VOID_DEBRIS)
+                .add(ModBlocks.CHAROITE_BLOCK);
 
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.PRISMARINE_BLOCK)
-                .add(ModBlocks.PRISMATIC_DEBRIS);
+                .add(ModBlocks.PRISMATIC_DEBRIS)
+                .add(ModBlocks.DRAGONITE_BLOCK)
+                .add(ModBlocks.VOID_DEBRIS);
 
         valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
-                .add(ModBlocks.PRISMARINE_BLOCK);
+                .add(ModBlocks.PRISMARINE_BLOCK)
+                .add(ModBlocks.DRAGONITE_BLOCK);
 
         valueLookupBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of(EndgameGear.MOD_ID, "prismarine_pillar_surfaces")))
                 .add(Blocks.GRAVEL)
                 .add(Blocks.SAND);
+
+        valueLookupBuilder(TagKey.of(RegistryKeys.BLOCK, Identifier.of(EndgameGear.MOD_ID, "charoite_pillar_surfaces")))
+                .add(Blocks.END_STONE);
     }
 }

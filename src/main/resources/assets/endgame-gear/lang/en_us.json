@@ -47,5 +47,9 @@
 
   "block.endgame-gear.prismarine_block": "Block of Prismarine",
   "block.endgame-gear.prismarine_crystal": "Prismarine Crystal",
-  "block.endgame-gear.prismatic_debris": "Prismatic Debris"
+  "block.endgame-gear.prismatic_debris": "Prismatic Debris",
+
+  "block.endgame-gear.dragonite_block": "Block of Dragonite",
+  "block.endgame-gear.void_debris": "Void Debris",
+  "block.endgame-gear.charoite_block": "Charoite Block"
 }

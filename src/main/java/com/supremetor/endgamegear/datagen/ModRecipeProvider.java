@@ -31,6 +31,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeGenerator(wrapperLookup, recipeExporter) {
             @Override
             public void generate() {
+                // Prismarine ingot recipes
                 List<ItemConvertible> PRISMATIC_DEBRIS = List.of(ModBlocks.PRISMATIC_DEBRIS);
                 offerSmelting(PRISMATIC_DEBRIS, RecipeCategory.MISC, ModItems.PRISMARINE_SCRAP, 2.0f, 200, "prismarine_scrap");
                 offerBlasting(PRISMATIC_DEBRIS, RecipeCategory.MISC, ModItems.PRISMARINE_SCRAP, 2.0f, 100, "prismarine_scrap");
@@ -45,17 +46,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion("has_prismarine_scrap", this.conditionsFromItem(ModItems.PRISMARINE_SCRAP))
                         .offerTo(exporter);
 
-//                offerReversibleCompactingRecipesWithReverseRecipeGroup(
-//                        RecipeCategory.MISC, ModItems.PRISMARINE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMARINE_BLOCK,
-//                        "prismarine_ingot_from_prismarine_block", "prismarine_ingot"
-//                );
-                createShapeless(RecipeCategory.MISC, ModItems.DRAGONITE_INGOT)
-                        .input(ModItems.DRAGONITE_SCRAP, 4)
-                        .input(ModItems.CHAROITE, 4)
-                        .criterion("has_dragonite_scrap", this.conditionsFromItem(ModItems.DRAGONITE_SCRAP))
-                        .offerTo(exporter);
-
-
                 createShaped(RecipeCategory.COMBAT, Items.TRIDENT)
                         .pattern(" SS")
                         .pattern(" IS")
@@ -66,6 +56,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .offerTo(exporter);
 
 
+                // Dragonite ingot recipes
+                List<ItemConvertible> VOID_DEBRIS = List.of(ModBlocks.VOID_DEBRIS);
+                offerSmelting(VOID_DEBRIS, RecipeCategory.MISC, ModItems.DRAGONITE_SCRAP, 2.0f, 200, "dragonite_scrap");
+                offerBlasting(VOID_DEBRIS, RecipeCategory.MISC, ModItems.DRAGONITE_SCRAP, 2.0f, 100, "dragonite_scrap");
+
+                offerReversibleCompactingRecipesWithReverseRecipeGroup(
+                        RecipeCategory.MISC, ModItems.DRAGONITE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.DRAGONITE_BLOCK,
+                        "dragonite_ingot_from_dragonite_block", "dragonite_ingot"
+                );
+                createShapeless(RecipeCategory.MISC, ModItems.DRAGONITE_INGOT)
+                        .input(ModItems.DRAGONITE_SCRAP, 4)
+                        .input(ModItems.CHAROITE, 4)
+                        .criterion("has_dragonite_scrap", this.conditionsFromItem(ModItems.DRAGONITE_SCRAP))
+                        .offerTo(exporter);
+
+
+                // Block recipes
                 createShapeless(RecipeCategory.MISC, Items.PRISMARINE_SHARD, 4)
                         .input(Items.PRISMARINE, 1)
                         .criterion("has_prismarine", conditionsFromItem(Items.PRISMARINE))
@@ -77,7 +84,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion("has_prismarine_crystal", conditionsFromItem(ModBlocks.PRISMARINE_CRYSTAL))
                         .offerTo(exporter);
 
+                offer2x2CompactingRecipe(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHAROITE_BLOCK, ModItems.CHAROITE);
+                createShapeless(RecipeCategory.MISC, ModItems.CHAROITE, 4)
+                        .input(ModBlocks.CHAROITE_BLOCK, 1)
+                        .criterion("has_charoite_block", conditionsFromItem(ModBlocks.CHAROITE_BLOCK))
+                        .offerTo(exporter);
 
+
+                // Prismarine ingot smithing table recipes
                 offerSmithingTemplateCopyingRecipe(ModItems.PRISMARINE_UPGRADE_SMITHING_TEMPLATE, Items.PRISMARINE);
 
                 generateSmithingTransformRecipe(ModItems.PRISMARINE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HELMET, ModItems.PRISMARINE_INGOT,
@@ -101,6 +115,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         RecipeCategory.TOOLS, ModItems.PRISMARINE_HOE, "prismarine_upgrade_hoe");
 
 
+                // Dragonite ingot smithing table recipes
                 offerSmithingTemplateCopyingRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.END_STONE);
 
                 generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HELMET, ModItems.DRAGONITE_INGOT,
@@ -142,6 +157,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public String getName() {
-        return "Prismarine Recipes";
+        return "Endgame Gear Recipes";
     }
 }
