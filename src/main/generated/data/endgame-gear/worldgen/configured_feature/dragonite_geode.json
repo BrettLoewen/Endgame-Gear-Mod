@@ -2,19 +2,71 @@
   "type": "endgame-gear:geode_sky",
   "config": {
     "inner_block": {
-      "Name": "endgame-gear:charoite_block"
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "endgame-gear:charoite_block"
+          },
+          "weight": 3
+        },
+        {
+          "data": {
+            "Name": "minecraft:obsidian"
+          },
+          "weight": 1
+        }
+      ]
     },
     "outer_block": {
-      "Name": "minecraft:end_stone"
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:smooth_basalt"
+      }
     },
-    "radius": 3,
+    "radius": {
+      "type": "minecraft:weighted_list",
+      "distribution": [
+        {
+          "data": 5,
+          "weight": 6
+        },
+        {
+          "data": 7,
+          "weight": 3
+        },
+        {
+          "data": 9,
+          "weight": 1
+        }
+      ]
+    },
     "special_block": {
-      "Name": "endgame-gear:void_debris"
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "endgame-gear:void_debris"
+      }
     },
     "special_count": {
-      "type": "minecraft:uniform",
-      "max_inclusive": 4,
-      "min_inclusive": 2
+      "type": "minecraft:weighted_list",
+      "distribution": [
+        {
+          "data": 1,
+          "weight": 1
+        },
+        {
+          "data": 2,
+          "weight": 2
+        },
+        {
+          "data": 3,
+          "weight": 5
+        },
+        {
+          "data": 4,
+          "weight": 2
+        }
+      ]
     }
   }
 }

@@ -25,11 +25,11 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(20), YOffset.fixed(50))));
 
         register(context, CHAROITE_PILLAR_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.CHAROITE_PILLAR_KEY),
-                ModOrePlacement.modifiersWithRarity(6,
+                ModOrePlacement.modifiersWithRarity(12,
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(50), YOffset.fixed(70))));
 
         register(context, DRAGONITE_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DRAGONITE_GEODE_KEY),
-                ModOrePlacement.modifiersWithRarity(8,
+                ModOrePlacement.modifiersWithRarity(50,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(70), YOffset.fixed(120))));
     }
 

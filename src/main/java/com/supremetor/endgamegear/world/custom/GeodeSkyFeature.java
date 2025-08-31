@@ -7,6 +7,9 @@ import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GeodeSkyFeature extends Feature<GeodeSkyConfig> {
     public GeodeSkyFeature(Codec<GeodeSkyConfig> codec) {
         super(codec);
@@ -20,9 +23,12 @@ public class GeodeSkyFeature extends Feature<GeodeSkyConfig> {
         Random random = context.getRandom();
 
         int radius = config.radius().get(random);
-        int diameter = radius * 2 + 1;
 
-        // Create hollow sphere
+        List<BlockPos> innerBlocks = new ArrayList<>();
+
+        // Create a hollow sphere:
+        // Do a 3d loop through every block pos in the sphere (all possible offsets from the origin).
+        // Use the distance from the origin of the block pos to determine which block (outer, inner, or AIR) should be placed.
         for (int dx = -radius - 1; dx <= radius + 1; dx++) {
             for (int dy = -radius - 1; dy <= radius + 1; dy++) {
                 for (int dz = -radius - 1; dz <= radius + 1; dz++) {
@@ -31,33 +37,23 @@ public class GeodeSkyFeature extends Feature<GeodeSkyConfig> {
                     BlockPos pos = origin.add(dx, dy, dz);
 
                     if (dist <= radius && dist >= radius - 1.5) {
-                        // Outer shell
-                        world.setBlockState(pos, config.outerBlock(), 3);
+                        world.setBlockState(pos, config.outerBlock().get(random, pos), 3);
                     } else if (dist <= radius - 1.5 && dist >= radius - 2.5) {
-                        // Inner lining
-                        world.setBlockState(pos, config.innerBlock(), 3);
+                        world.setBlockState(pos, config.innerBlock().get(random, pos), 3);
+                        innerBlocks.add(pos);
                     } else if (dist < radius - 2.5) {
-                        // Hollow cavity (air)
                         world.setBlockState(pos, net.minecraft.block.Blocks.AIR.getDefaultState(), 3);
                     }
                 }
             }
         }
 
-        // Add special blocks in the cavity wall
+        // Add special blocks to the inner wall.
+        // Pick a random block pos from the inner wall (the list is filled earlier) and swap it to the special block.
         int specials = config.specialCount().get(random);
         for (int i = 0; i < specials; i++) {
-            double theta = random.nextDouble() * Math.PI * 2;
-            double phi = random.nextDouble() * Math.PI;
-
-            int sx = origin.getX() + (int) (Math.sin(phi) * Math.cos(theta) * (radius - 2));
-            int sy = origin.getY() + (int) (Math.cos(phi) * (radius - 2));
-            int sz = origin.getZ() + (int) (Math.sin(phi) * Math.sin(theta) * (radius - 2));
-
-            BlockPos specialPos = new BlockPos(sx, sy, sz);
-            if (world.getBlockState(specialPos).isOf(config.innerBlock().getBlock())) {
-                world.setBlockState(specialPos, config.specialBlock(), 3);
-            }
+            BlockPos specialPos = innerBlocks.get(random.nextInt(innerBlocks.size()));
+            world.setBlockState(specialPos, config.specialBlock().get(random, specialPos), 3);
         }
 
         return true;

@@ -59,6 +59,24 @@ public class ModConfiguredFeatures {
             .add(ConstantIntProvider.create(15), 1)
             .build());
 
+    private static final WeightedBlockStateProvider DRAGONITE_GEODE_INNER_BLOCKS = new WeightedBlockStateProvider(Pool.<BlockState>builder()
+            .add(ModBlocks.CHAROITE_BLOCK.getDefaultState(), 3)
+            .add(Blocks.OBSIDIAN.getDefaultState(), 1)
+            .build());
+
+    private static final IntProvider DRAGONITE_GEODE_RADIUS_PROVIDER = new WeightedListIntProvider(Pool.<IntProvider>builder()
+            .add(ConstantIntProvider.create(5), 6)
+            .add(ConstantIntProvider.create(7), 3)
+            .add(ConstantIntProvider.create(9), 1)
+            .build());
+
+    private static final IntProvider DRAGONITE_GEODE_SPECIAL_COUNT_PROVIDER = new WeightedListIntProvider(Pool.<IntProvider>builder()
+            .add(ConstantIntProvider.create(1), 1)
+            .add(ConstantIntProvider.create(2), 2)
+            .add(ConstantIntProvider.create(3), 5)
+            .add(ConstantIntProvider.create(4), 2)
+            .build());
+
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context, PRISMARINE_PILLAR_KEY, ModFeatures.BLOCK_PILLAR_GROWTH, new BlockPillarGrowthConfig(
                 PRISMARINE_PILLAR_INNER_BLOCKS,
@@ -77,11 +95,11 @@ public class ModConfiguredFeatures {
         ));
 
         register(context, DRAGONITE_GEODE_KEY, ModFeatures.GEODE_SKY, new GeodeSkyConfig(
-                Blocks.END_STONE.getDefaultState(),
-                ModBlocks.CHAROITE_BLOCK.getDefaultState(),
-                ModBlocks.VOID_DEBRIS.getDefaultState(),
-                ConstantIntProvider.create(3),
-                UniformIntProvider.create(2, 4)
+                BlockStateProvider.of(Blocks.SMOOTH_BASALT),
+                DRAGONITE_GEODE_INNER_BLOCKS,
+                BlockStateProvider.of(ModBlocks.VOID_DEBRIS),
+                DRAGONITE_GEODE_RADIUS_PROVIDER,
+                DRAGONITE_GEODE_SPECIAL_COUNT_PROVIDER
         ));
     }
 
