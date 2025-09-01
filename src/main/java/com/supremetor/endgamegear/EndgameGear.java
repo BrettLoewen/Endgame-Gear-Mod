@@ -5,15 +5,9 @@ import com.supremetor.endgamegear.item.ModItemGroups;
 import com.supremetor.endgamegear.item.ModItems;
 import com.supremetor.endgamegear.util.ModLootTableModifiers;
 import com.supremetor.endgamegear.world.ModFeatures;
-import com.supremetor.endgamegear.world.custom.BlockPillarGrowthConfig;
-import com.supremetor.endgamegear.world.custom.BlockPillarGrowthFeature;
 import com.supremetor.endgamegear.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.feature.Feature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
