@@ -16,6 +16,7 @@ e71643b901e78d7b6a016e8f14c200f8e032259f assets/endgame-gear/items/dragonite_hel
 b0ea404881f148e877d54bf60a85fabf93be4219 assets/endgame-gear/items/dragonite_ingot.json
 fc85ad7bfe5a644e6f92aea885a82b7bb00a3987 assets/endgame-gear/items/dragonite_leggings.json
 435b60fd8521a4db1d403556f6a97812b0799577 assets/endgame-gear/items/dragonite_pickaxe.json
+d496736b388fc417c71efcdd7cc2d374303361e8 assets/endgame-gear/items/dragonite_rocket.json
 d8c800628632b268ea150c628acc151639284769 assets/endgame-gear/items/dragonite_scrap.json
 f49536c5dc25db313ed8bf2ba43f190767fc63a5 assets/endgame-gear/items/dragonite_shovel.json
 bf7f848874404cc1546e9fae87632b2f483e0db2 assets/endgame-gear/items/dragonite_sword.json
@@ -95,6 +96,7 @@ eb5da2b84f0cf67389934bdc390c63a5d6847ba2 assets/endgame-gear/models/item/dragoni
 086ee8370887c0efe00adaf3165057632f25ae7e assets/endgame-gear/models/item/dragonite_leggings_redstone_trim.json
 b9a5ecbd5e9701df6325286e47bce56a975503ca assets/endgame-gear/models/item/dragonite_leggings_resin_trim.json
 be610c54813f351182bb0456bfdd124f04f7fe41 assets/endgame-gear/models/item/dragonite_pickaxe.json
+e549510c750c145a43827839a534bb2c46087a62 assets/endgame-gear/models/item/dragonite_rocket.json
 5594df07aa18b41373ab8594680b73de0c048709 assets/endgame-gear/models/item/dragonite_scrap.json
 1ffc1af59cb8831fbfde09e640646f63105fc5f1 assets/endgame-gear/models/item/dragonite_shovel.json
 90e6d7c5f101d7b9cefe21c7d7c689131969b8a3 assets/endgame-gear/models/item/dragonite_sword.json

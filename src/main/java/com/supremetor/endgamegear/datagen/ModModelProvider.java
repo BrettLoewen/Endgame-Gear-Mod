@@ -46,6 +46,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.DRAGONITE_SHOVEL, Models.HANDHELD);
         itemModelGenerator.register(ModItems.DRAGONITE_HOE, Models.HANDHELD);
 
+        itemModelGenerator.register(ModItems.DRAGONITE_ROCKET, Models.HANDHELD);
+
         itemModelGenerator.registerArmor(ModItems.PRISMARINE_HELMET, ModArmorMaterials.PRISMARINE_KEY, ItemModelGenerator.HELMET_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.PRISMARINE_CHESTPLATE, ModArmorMaterials.PRISMARINE_KEY, ItemModelGenerator.CHESTPLATE_TRIM_ID_PREFIX, false);
         itemModelGenerator.registerArmor(ModItems.PRISMARINE_LEGGINGS, ModArmorMaterials.PRISMARINE_KEY, ItemModelGenerator.LEGGINGS_TRIM_ID_PREFIX, false);

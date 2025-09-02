@@ -4,6 +4,8 @@ import com.supremetor.endgamegear.EndgameGear;
 import com.supremetor.endgamegear.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.FireworksComponent;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -11,6 +13,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+
+import java.util.List;
 
 public class ModItemGroups {
     public static final ItemGroup PRISMARINE_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -77,6 +81,9 @@ public class ModItemGroups {
                         entries.add(ModItems.DRAGONITE_HOE);
 
                         entries.add(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE);
+
+                        // Register all duration variants of the dragonite rocket
+                        ModItems.registerDragoniteRocketVariants(entries);
                     }).build());
 
     public static void registerItemGroups() {

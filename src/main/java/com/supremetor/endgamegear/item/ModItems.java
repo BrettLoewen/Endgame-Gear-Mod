@@ -1,9 +1,11 @@
 package com.supremetor.endgamegear.item;
 
 import com.supremetor.endgamegear.EndgameGear;
+import com.supremetor.endgamegear.item.custom.DurabilityRocketItem;
 import com.supremetor.endgamegear.item.custom.ModArmorItem;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.FireworksComponent;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
@@ -88,6 +90,13 @@ public class ModItems {
                     getUpgradeEmptyAdditionsSlotTextures(),
                     setting.rarity(Rarity.UNCOMMON)));
 
+    public static final Item DRAGONITE_ROCKET = registerItem("dragonite_rocket",
+            setting -> new DurabilityRocketItem(setting
+                    .component(DataComponentTypes.FIREWORKS, new FireworksComponent(1, List.of()))
+                    .maxDamage(432)
+                    .repairable(DRAGONITE_INGOT)
+    ));
+
     // From SmithingTemplateItem.java
     private static List<Identifier> getUpgradeEmptyBaseSlotTextures() {
         return List.of(
@@ -106,6 +115,23 @@ public class ModItems {
     // From SmithingTemplateItem.java
     private static List<Identifier> getUpgradeEmptyAdditionsSlotTextures() {
         return List.of(Identifier.ofVanilla("container/slot/ingot"));
+    }
+
+    public static void registerDragoniteRocketVariants(ItemGroup.Entries entries) {
+        // Flight Duration 1
+        ItemStack rocket1 = new ItemStack(ModItems.DRAGONITE_ROCKET);
+        rocket1.set(DataComponentTypes.FIREWORKS, new FireworksComponent(1, List.of()));
+        entries.add(rocket1);
+
+        // Flight Duration 2
+        ItemStack rocket2 = new ItemStack(ModItems.DRAGONITE_ROCKET);
+        rocket2.set(DataComponentTypes.FIREWORKS, new FireworksComponent(2, List.of()));
+        entries.add(rocket2);
+
+        // Flight Duration 3
+        ItemStack rocket3 = new ItemStack(ModItems.DRAGONITE_ROCKET);
+        rocket3.set(DataComponentTypes.FIREWORKS, new FireworksComponent(3, List.of()));
+        entries.add(rocket3);
     }
 
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
@@ -154,6 +180,9 @@ public class ModItems {
             entries.add(DRAGONITE_AXE);
             entries.add(DRAGONITE_SHOVEL);
             entries.add(DRAGONITE_HOE);
+
+            // Register all duration variants of the dragonite rocket
+            registerDragoniteRocketVariants(entries);
         });
     }
 }
