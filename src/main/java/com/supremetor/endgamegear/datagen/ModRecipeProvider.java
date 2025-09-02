@@ -5,11 +5,14 @@ import com.supremetor.endgamegear.block.ModBlocks;
 import com.supremetor.endgamegear.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.FireworksComponent;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.data.recipe.SmithingTransformRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
@@ -137,7 +140,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         RecipeCategory.TOOLS, ModItems.DRAGONITE_SHOVEL, "dragonite_upgrade_shovel");
                 generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, ModItems.DRAGONITE_INGOT,
                         RecipeCategory.TOOLS, ModItems.DRAGONITE_HOE, "dragonite_upgrade_hoe");
+
+
+                // Recipes for Dragonite Rocket with durations 1, 2, and 3.
+                // Build ItemStacks for each flight duration variant.
+                ItemStack rocketDur1 = new ItemStack(ModItems.DRAGONITE_ROCKET);
+                rocketDur1.set(DataComponentTypes.FIREWORKS, new FireworksComponent(1, List.of()));
+
+                ItemStack rocketDur2 = new ItemStack(ModItems.DRAGONITE_ROCKET);
+                rocketDur2.set(DataComponentTypes.FIREWORKS, new FireworksComponent(2, List.of()));
+
+                ItemStack rocketDur3 = new ItemStack(ModItems.DRAGONITE_ROCKET);
+                rocketDur3.set(DataComponentTypes.FIREWORKS, new FireworksComponent(3, List.of()));
+
+                // Use ItemStacks created above to create recipes
+                createShapeless(RecipeCategory.MISC, rocketDur1)
+                        .input(ModItems.DRAGONITE_INGOT)
+                        .input(Items.GUNPOWDER)
+                        .criterion(hasItem(ModItems.DRAGONITE_INGOT), conditionsFromItem(ModItems.DRAGONITE_INGOT))
+                        .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(EndgameGear.MOD_ID, "dragonite_rocket_flight_duration_1")));
+                createShapeless(RecipeCategory.MISC, rocketDur2)
+                        .input(ModItems.DRAGONITE_INGOT)
+                        .input(Items.GUNPOWDER, 2)
+                        .criterion(hasItem(ModItems.DRAGONITE_INGOT), conditionsFromItem(ModItems.DRAGONITE_INGOT))
+                        .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(EndgameGear.MOD_ID, "dragonite_rocket_flight_duration_2")));
+                createShapeless(RecipeCategory.MISC, rocketDur3)
+                        .input(ModItems.DRAGONITE_INGOT)
+                        .input(Items.GUNPOWDER, 3)
+                        .criterion(hasItem(ModItems.DRAGONITE_INGOT), conditionsFromItem(ModItems.DRAGONITE_INGOT))
+                        .criterion(hasItem(Items.GUNPOWDER), conditionsFromItem(Items.GUNPOWDER))
+                        .offerTo(exporter, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(EndgameGear.MOD_ID, "dragonite_rocket_flight_duration_3")));
             }
+
 
             private void generateSmithingTransformRecipe(Item template, Item appliesTo, Item ingredient, RecipeCategory recipeCategory,
                                                          Item output, String recipeId) {

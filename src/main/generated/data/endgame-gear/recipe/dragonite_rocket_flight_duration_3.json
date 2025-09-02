@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "endgame-gear:dragonite_ingot",
+    "minecraft:gunpowder",
+    "minecraft:gunpowder",
+    "minecraft:gunpowder"
+  ],
+  "result": {
+    "components": {
+      "minecraft:fireworks": {
+        "flight_duration": 3
+      }
+    },
+    "count": 1,
+    "id": "endgame-gear:dragonite_rocket"
+  }
+}

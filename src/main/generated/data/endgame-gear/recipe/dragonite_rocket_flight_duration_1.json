@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "endgame-gear:dragonite_ingot",
+    "minecraft:gunpowder"
+  ],
+  "result": {
+    "count": 1,
+    "id": "endgame-gear:dragonite_rocket"
+  }
+}
