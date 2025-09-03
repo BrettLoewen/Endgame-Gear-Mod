@@ -4,6 +4,7 @@ e9b271a3a016854fe29ec14bdce3f30a846b16c9 data/endgame-gear/tags/item/dragonite_r
 83a20a84fe28029fe8177896f2beaca125b52d3b data/minecraft/tags/item/axes.json
 51bd1ae8e5bfe2194886c91f6e8f9b7ef423df69 data/minecraft/tags/item/beacon_payment_items.json
 789cddc6b04e48ec86099e27d3486f76dec09540 data/minecraft/tags/item/enchantable/chest_armor.json
+b626f72faf59e6e990100d59b0d788d4ef449878 data/minecraft/tags/item/enchantable/durability.json
 1c374f136e5152e9534b0afaf928dda04f0627ae data/minecraft/tags/item/enchantable/foot_armor.json
 fc3502cecca147d53fc26100c5357463a8ec9196 data/minecraft/tags/item/enchantable/head_armor.json
 e29e585e4dd9398d32cdcc0a449829dceca52cd3 data/minecraft/tags/item/enchantable/leg_armor.json

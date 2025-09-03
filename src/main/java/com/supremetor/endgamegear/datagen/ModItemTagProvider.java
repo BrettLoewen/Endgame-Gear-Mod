@@ -64,5 +64,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
                 .add(ModItems.PRISMARINE_INGOT)
                 .add(ModItems.DRAGONITE_INGOT);
+
+        valueLookupBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(ModItems.DRAGONITE_ROCKET);
     }
 }

@@ -94,6 +94,7 @@ public class ModItems {
             setting -> new DurabilityRocketItem(setting
                     .component(DataComponentTypes.FIREWORKS, new FireworksComponent(1, List.of()))
                     .maxDamage(432)
+                    .enchantable(15)
                     .repairable(DRAGONITE_INGOT)
     ));
 
