@@ -81,6 +81,7 @@ public class ModItemGroups {
                         entries.add(ModItems.DRAGONITE_HOE);
 
                         entries.add(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE);
+                        entries.add(ModItems.DRAGON_SMITHING_TEMPLATE);
 
                         // Register all duration variants of the dragonite rocket
                         ModItems.registerDragoniteRocketVariants(entries);

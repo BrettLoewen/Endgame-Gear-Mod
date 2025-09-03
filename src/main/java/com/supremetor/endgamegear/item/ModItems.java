@@ -3,6 +3,7 @@ package com.supremetor.endgamegear.item;
 import com.supremetor.endgamegear.EndgameGear;
 import com.supremetor.endgamegear.item.custom.DurabilityRocketItem;
 import com.supremetor.endgamegear.item.custom.ModArmorItem;
+import com.supremetor.endgamegear.trim.ModTrimMaterials;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.FireworksComponent;
@@ -12,6 +13,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.text.Text;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Identifier;
@@ -27,7 +29,7 @@ public class ModItems {
 
     public static final Item DRAGONITE_INGOT = registerItem("dragonite_ingot", Item::new);
     public static final Item DRAGONITE_SCRAP = registerItem("dragonite_scrap", Item::new);
-    public static final Item CHAROITE = registerItem("charoite", Item::new);
+    public static final Item CHAROITE = registerItem("charoite", setting -> new Item(setting.trimMaterial(ModTrimMaterials.CHAROITE)));
 
     public static final Item PRISMARINE_SWORD = registerItem("prismarine_sword",
             setting -> new Item(setting.sword(ModToolMaterials.PRISMARINE, 3.0f, -2.4f)));
@@ -97,6 +99,8 @@ public class ModItems {
                     .enchantable(15)
                     .repairable(DRAGONITE_INGOT)
     ));
+
+    public static final Item DRAGON_SMITHING_TEMPLATE = registerItem("dragon_armor_trim_smithing_template", SmithingTemplateItem::of);
 
     // From SmithingTemplateItem.java
     private static List<Identifier> getUpgradeEmptyBaseSlotTextures() {
@@ -169,6 +173,7 @@ public class ModItems {
             entries.add(DRAGONITE_INGOT);
             entries.add(DRAGONITE_UPGRADE_SMITHING_TEMPLATE);
             entries.add(CHAROITE);
+            entries.add(DRAGON_SMITHING_TEMPLATE);
         });
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {

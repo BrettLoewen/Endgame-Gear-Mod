@@ -67,5 +67,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
         valueLookupBuilder(ItemTags.DURABILITY_ENCHANTABLE)
                 .add(ModItems.DRAGONITE_ROCKET);
+
+        valueLookupBuilder(ItemTags.TRIM_MATERIALS)
+                .add(ModItems.CHAROITE);
     }
 }

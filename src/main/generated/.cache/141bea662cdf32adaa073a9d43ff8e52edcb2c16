@@ -1,5 +1,7 @@
 // 1.21.8	-999999999-01-01T00:00:00	Endgame Gear/Endgame Gear Registries
 c5767fbf1f2216c69215ac7df82058e75809d29b data/endgame-gear/enchantment/kinetic_defense.json
+9ba0246f6d6ca5742a031e37ce2fe5ace4c68940 data/endgame-gear/trim_material/charoite.json
+513702b895aaa654b6d5d4e08711b6be45d0d84f data/endgame-gear/trim_pattern/dragon.json
 5ebeb414e476b2ca0e5bfe1d9a4e7d6873f9e50a data/endgame-gear/worldgen/configured_feature/charoite_pillar.json
 2073044fc46ca3954adc91265b65c996a31f45aa data/endgame-gear/worldgen/configured_feature/dragonite_geode.json
 b1ba76d2fdebf0267c4181dd211076cc59ec4c28 data/endgame-gear/worldgen/configured_feature/prismarine_pillar.json

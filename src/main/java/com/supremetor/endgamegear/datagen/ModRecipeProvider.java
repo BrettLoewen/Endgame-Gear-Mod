@@ -3,6 +3,7 @@ package com.supremetor.endgamegear.datagen;
 import com.supremetor.endgamegear.EndgameGear;
 import com.supremetor.endgamegear.block.ModBlocks;
 import com.supremetor.endgamegear.item.ModItems;
+import com.supremetor.endgamegear.trim.ModTrimPatterns;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.component.DataComponentTypes;
@@ -140,6 +141,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         RecipeCategory.TOOLS, ModItems.DRAGONITE_SHOVEL, "dragonite_upgrade_shovel");
                 generateSmithingTransformRecipe(ModItems.DRAGONITE_UPGRADE_SMITHING_TEMPLATE, Items.DIAMOND_HOE, ModItems.DRAGONITE_INGOT,
                         RecipeCategory.TOOLS, ModItems.DRAGONITE_HOE, "dragonite_upgrade_hoe");
+
+                offerSmithingTrimRecipe(ModItems.DRAGON_SMITHING_TEMPLATE, ModTrimPatterns.DRAGON,
+                        RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(EndgameGear.MOD_ID, "dragon")));
 
 
                 // Recipes for Dragonite Rocket with durations 1, 2, and 3.

@@ -2,6 +2,8 @@ package com.supremetor.endgamegear;
 
 import com.supremetor.endgamegear.datagen.*;
 import com.supremetor.endgamegear.enchantment.ModEnchantments;
+import com.supremetor.endgamegear.trim.ModTrimMaterials;
+import com.supremetor.endgamegear.trim.ModTrimPatterns;
 import com.supremetor.endgamegear.world.ModConfiguredFeatures;
 import com.supremetor.endgamegear.world.ModPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
@@ -28,5 +30,8 @@ public class EndgameGearDataGenerator implements DataGeneratorEntrypoint {
         registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
 
         registryBuilder.addRegistry(RegistryKeys.ENCHANTMENT, ModEnchantments::bootstrap);
+
+        registryBuilder.addRegistry(RegistryKeys.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
+        registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, ModTrimPatterns::bootstrap);
     }
 }

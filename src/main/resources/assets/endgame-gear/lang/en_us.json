@@ -33,6 +33,8 @@
   "item.endgame-gear.prismarine_upgrade_smithing_template": "Prismarine Upgrade",
   "item.endgame-gear.dragonite_upgrade_smithing_template": "Dragonite Upgrade",
 
+  "item.endgame-gear.dragon_armor_trim_smithing_template": "Dragon Smithing Template",
+
   "item.endgame-gear.smithing_template.prismarine_upgrade.additions_slot_description": "Add Prismarine Ingot",
   "item.endgame-gear.smithing_template.prismarine_upgrade.applies_to": "Diamond Equipment",
   "item.endgame-gear.smithing_template.prismarine_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
@@ -55,5 +57,9 @@
 
   "block.endgame-gear.dragonite_block": "Block of Dragonite",
   "block.endgame-gear.void_debris": "Void Debris",
-  "block.endgame-gear.charoite_block": "Charoite Block"
+  "block.endgame-gear.charoite_block": "Charoite Block",
+
+
+  "trim_material.endgame-gear.charoite": "Charoite Material",
+  "trim_pattern.endgame-gear.dragon": "Dragon Armor Pattern"
 }
