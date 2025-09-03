@@ -42,8 +42,8 @@
     "per_level_above_first": 6
   },
   "slots": [
-    "chest"
+    "head"
   ],
-  "supported_items": "#endgame-gear:enchantable/glider_enchantable",
+  "supported_items": "#minecraft:enchantable/head_armor",
   "weight": 5
 }

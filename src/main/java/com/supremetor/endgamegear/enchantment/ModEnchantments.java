@@ -14,6 +14,7 @@ import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.DamageTypeTags;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 public class ModEnchantments {
@@ -25,13 +26,13 @@ public class ModEnchantments {
 
         register(registerable, KINETIC_DEFENSE,
                 Enchantment.builder(Enchantment.definition(
-                        items.getOrThrow(ModTags.Items.GLIDER_ENCHANTABLE),
+                        items.getOrThrow(ItemTags.HEAD_ARMOR_ENCHANTABLE),
                         5,
                         4,
                         Enchantment.leveledCost(5, 6),
                         Enchantment.leveledCost(11, 6),
                         2,
-                        AttributeModifierSlot.CHEST))
+                        AttributeModifierSlot.HEAD))
                 .addEffect(
                         EnchantmentEffectComponentTypes.DAMAGE_PROTECTION,
                         new AddEnchantmentEffect(

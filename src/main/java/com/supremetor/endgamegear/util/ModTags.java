@@ -23,8 +23,6 @@ public class ModTags {
         public static final TagKey<Item> PRISMARINE_REPAIR = createTag("prismarine_repair");
         public static final TagKey<Item> DRAGONITE_REPAIR = createTag("dragonite_repair");
 
-        public static final TagKey<Item> GLIDER_ENCHANTABLE = createTag("enchantable/glider_enchantable");
-
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(EndgameGear.MOD_ID, name));
         }
