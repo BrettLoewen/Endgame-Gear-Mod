@@ -29,7 +29,7 @@ public class ModPlacedFeatures {
                         HeightRangePlacementModifier.trapezoid(YOffset.fixed(50), YOffset.fixed(70))));
 
         register(context, DRAGONITE_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DRAGONITE_GEODE_KEY),
-                ModOrePlacement.modifiersWithRarity(100,
+                ModOrePlacement.modifiersWithRarity(120,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(70), YOffset.fixed(200))));
     }
 
